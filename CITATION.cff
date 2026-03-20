@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "Please cite this dataset using the metadata below."
+type: dataset
+title: "Base de Datos de Impacto Económico de Israel (2020-2024): Indicadores Clave, Factores Principales e Índices Financieros"
+authors:
+  - family-names: "de la Serna Tuya"
+    given-names: "Juan Moisés"
+    orcid: "https://orcid.org/0000-0002-8401-8018"
+    affiliation: "Universidad Internacional de La Rioja (UNIR)"
+doi: "10.5281/zenodo.18879626"
+url: "https://doi.org/10.5281/zenodo.18879626"
+repository-code: "https://github.com/juanmoisesd/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore"
+license: CC0-1.0
+date-released: "2026-03-05"
+keywords:
+  - "Israel"
+  - "macroeconomía"
+  - "PIB"
+  - "inflación"
+  - "Oriente Medio"
