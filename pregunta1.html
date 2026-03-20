@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pregunta 1: PIB e Inflacion | Israel Econ DB</title>
+  <style>
+    :root{--bg-primary:#0f172a;--bg-secondary:#1e293b;--bg-card:#334155;--text-primary:#f8fafc;--text-secondary:#94a3b8;--accent:#3b82f6;--accent-pink:#ec4899;--accent-teal:#14b8a6;--accent-amber:#f59e0b;--border:#334155;--success:#10b981}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg-primary);color:var(--text-primary);line-height:1.6}
+    nav{background:rgba(15,23,42,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:1000;padding:1rem 0}
+    .nav-container{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;justify-content:space-between;align-items:center}
+    .nav-brand{font-size:1.1rem;font-weight:800;color:var(--accent);text-decoration:none}
+    .nav-brand span{color:var(--accent-pink)}
+    .nav-links{display:flex;gap:1.5rem;list-style:none}
+    .nav-links a{color:var(--text-secondary);text-decoration:none;font-size:.875rem;font-weight:500;padding:.4rem .6rem;border-radius:6px;transition:color .2s}
+    .nav-links a:hover{color:var(--text-primary);background:rgba(255,255,255,.05)}
+    .nav-links a.active{color:var(--accent)}
+    .container{max-width:1100px;margin:0 auto;padding:3rem 2rem}
+    .breadcrumb{font-size:.85rem;color:var(--text-secondary);margin-bottom:1.5rem}
+    .breadcrumb a{color:var(--accent);text-decoration:none}
+    .page-header{margin-bottom:3rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .page-tag{display:inline-block;background:rgba(59,130,246,.1);color:var(--accent);border:1px solid rgba(59,130,246,.25);border-radius:6px;padding:.2rem .75rem;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:1rem}
+    h1{font-size:clamp(1.5rem,3vw,2.25rem);font-weight:800;letter-spacing:-.03em;line-height:1.2;margin-bottom:.75rem}
+    .subtitle{color:var(--text-secondary);font-size:1rem;line-height:1.7;max-width:700px}
+    .section{margin-bottom:4rem}
+    h2{font-size:1.35rem;font-weight:700;color:var(--accent);margin-bottom:1.5rem;display:flex;align-items:center;gap:.75rem}
+    h2::before{content:'';width:4px;height:20px;background:var(--accent);border-radius:2px;flex-shrink:0}
+    .data-table{width:100%;border-collapse:collapse;background:var(--bg-secondary);border-radius:12px;overflow:hidden;border:1px solid var(--border)}
+    .data-table th{background:var(--bg-card);padding:.875rem 1rem;text-align:left;font-size:.8rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--text-secondary);border-bottom:1px solid var(--border)}
+    .data-table td{padding:.875rem 1rem;font-size:.9rem;border-bottom:1px solid rgba(71,85,105,.3);color:var(--text-secondary)}
+    .data-table tr:last-child td{border-bottom:none}
+    .data-table tr:hover td{background:rgba(255,255,255,.03)}
+    .data-table .num{font-variant-numeric:tabular-nums;font-weight:600;color:var(--text-primary)}
+    .data-table .pos{color:var(--success)}.data-table .neg{color:#ef4444}.data-table .year{font-weight:700;color:var(--text-primary)}
+    .kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;margin-bottom:3rem}
+    .kpi{background:var(--bg-secondary);border:1px solid var(--border);border-radius:12px;padding:1.5rem;position:relative;overflow:hidden}
+    .kpi::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+    .kpi.b::before{background:var(--accent)}.kpi.t::before{background:var(--accent-teal)}.kpi.p::before{background:var(--accent-pink)}.kpi.a::before{background:var(--accent-amber)}
+    .kpi-label{font-size:.75rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--text-secondary);margin-bottom:.5rem}
+    .kpi-value{font-size:1.75rem;font-weight:800;letter-spacing:-.03em;margin-bottom:.25rem}
+    .kpi.b .kpi-value{color:var(--accent)}.kpi.t .kpi-value{color:var(--accent-teal)}.kpi.p .kpi-value{color:var(--accent-pink)}.kpi.a .kpi-value{color:var(--accent-amber)}
+    .kpi-sub{font-size:.8rem;color:var(--text-secondary)}
+    .text-card{background:var(--bg-secondary);border:1px solid var(--border);border-radius:12px;padding:1.75rem;margin-bottom:1.5rem}
+    .text-card p{color:var(--text-secondary);line-height:1.8;margin-bottom:1rem}
+    .text-card p:last-child{margin-bottom:0}
+    .highlight{background:rgba(59,130,246,.08);border-left:3px solid var(--accent);padding:1rem 1.25rem;border-radius:0 8px 8px 0;margin:1rem 0;color:var(--text-secondary);font-size:.95rem;line-height:1.7}
+    .highlight strong{color:var(--text-primary)}
+    .nav-btns{display:flex;justify-content:space-between;margin-top:4rem;padding-top:2rem;border-top:1px solid var(--border);flex-wrap:wrap;gap:1rem}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.4rem;background:var(--bg-card);color:var(--text-primary);text-decoration:none;border-radius:8px;border:1px solid var(--border);font-size:.875rem;font-weight:600;transition:all .2s}
+    .btn:hover{background:var(--accent);border-color:var(--accent)}
+    .btn-next{background:var(--accent);border-color:var(--accent)}
+    @media(max-width:640px){.nav-links{display:none}.kpi-grid{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+<nav>
+  <div class="nav-container">
+    <a href="index.html" class="nav-brand">Israel<span>Econ</span>DB</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="pregunta1.html" class="active">PIB &amp; Inflaci&oacute;n</a></li>
+      <li><a href="pregunta2.html">Shocks Geopol&iacute;ticos</a></li>
+      <li><a href="pregunta3.html">Finanzas P&uacute;blicas</a></li>
+      <li><a href="pregunta4.html">Riesgo Pa&iacute;s</a></li>
+      <li><a href="pregunta5.html">Implicaciones</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+  <div class="breadcrumb"><a href="index.html">Inicio</a> / Pregunta 1 de 5</div>
+  <div class="page-header">
+    <div class="page-tag">Pregunta 01</div>
+    <h1>&iquest;C&oacute;mo evolucion&oacute; el PIB y la inflaci&oacute;n de Israel entre 2020 y 2024?</h1>
+    <p class="subtitle">An&aacute;lisis del crecimiento econ&oacute;mico real, inflaci&oacute;n acumulada y principales shocks sobre la actividad econ&oacute;mica israelí durante el per&iacute;odo.</p>
+  </div>
+
+  <div class="kpi-grid">
+    <div class="kpi b"><div class="kpi-label">Crecimiento PIB 2021</div><div class="kpi-value">8.6%</div><div class="kpi-sub">M&aacute;ximo del per&iacute;odo (rebote COVID)</div></div>
+    <div class="kpi t"><div class="kpi-label">Crecimiento PIB 2024</div><div class="kpi-value">0.9%</div><div class="kpi-sub">M&iacute;nimo: impacto guerra Gaza</div></div>
+    <div class="kpi p"><div class="kpi-label">Pico Inflaci&oacute;n</div><div class="kpi-value">5.4%</div><div class="kpi-sub">2022, crisis global de precios</div></div>
+    <div class="kpi a"><div class="kpi-label">PIB per c&aacute;pita 2024</div><div class="kpi-value">~$55k</div><div class="kpi-sub">D&oacute;lares corrientes USD</div></div>
+  </div>
+
+  <div class="section">
+    <h2>Datos Anuales de PIB e Inflaci&oacute;n (2020&ndash;2024)</h2>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>A&ntilde;o</th>
+          <th>Crecimiento PIB Real (%)</th>
+          <th>PIB nominal (USD miles M.)</th>
+          <th>Inflaci&oacute;n CPI (%)</th>
+          <th>Nota clave</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="year">2020</td><td class="num neg">-1.9%</td><td class="num">407</td><td class="num">-0.6%</td><td>Contracci&oacute;n por COVID-19</td></tr>
+        <tr><td class="year">2021</td><td class="num pos">+8.6%</td><td class="num">489</td><td class="num pos">+2.8%</td><td>Rebote post-pandemia</td></tr>
+        <tr><td class="year">2022</td><td class="num pos">+6.5%</td><td class="num">527</td><td class="num neg">+5.4%</td><td>Alta inflaci&oacute;n global</td></tr>
+        <tr><td class="year">2023</td><td class="num pos">+2.0%</td><td class="num">510</td><td class="num">+4.2%</td><td>Inicio guerra Gaza (Oct)</td></tr>
+        <tr><td class="year">2024</td><td class="num">+0.9%</td><td class="num">520</td><td class="num">+3.5%</td><td>Conflicto prolongado</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>An&aacute;lisis e Interpretaci&oacute;n</h2>
+    <div class="text-card">
+      <p>Israel experiment&oacute; dos reg&iacute;menes econ&oacute;micos bien diferenciados durante el per&iacute;odo 2020&ndash;2024. La primera fase (2020&ndash;2022) estuvo marcada por la pandemia de COVID-19 y su posterior recuperaci&oacute;n excepcional, impulsada por el sector tecnol&oacute;gico y el alto ritmo de vacunaci&oacute;n. La contracci&oacute;n del -1.9% en 2020 fue seguida por un rebote hist&oacute;rico del 8.6% en 2021.</p>
+      <p>La segunda fase (2023&ndash;2024) estuvo dominada por el shock geopol&iacute;tico del conflicto de Gaza. El crecimiento se fren&oacute; dr&aacute;sticamente, aunque la econom&iacute;a evit&oacute; la recesi&oacute;n gracias a la resiliencia del sector tech, las exportaciones de servicios y el apoyo financiero de la di&aacute;spora.</p>
+      <div class="highlight"><strong>Hallazgo clave:</strong> A pesar del conflicto bélico, Israel mantuvo crecimiento positivo en 2024 (+0.9%), lo que desaf&iacute;a los modelos est&aacute;ndar de impacto econ&oacute;mico de guerras prolongadas en econom&iacute;as peque&ntilde;as abiertas.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Evoluci&oacute;n de la Inflaci&oacute;n</h2>
+    <div class="text-card">
+      <p>La inflaci&oacute;n israelí sigui&oacute; de cerca la din&aacute;mica global. En 2020, Israel registr&oacute; deflaci&oacute;n leve (-0.6%) producto del colapso de la demanda interna. Tras la reapertura, la inflaci&oacute;n escal&oacute; hasta el 5.4% en 2022, impulsada por cadenas de suministro globales, precios energ&eacute;ticos y la depreciaci&oacute;n del s&eacute;quel.</p>
+      <p>El Banco de Israel respondi&oacute; elevando tipos desde 0.1% en 2022 hasta 4.75% en 2023, manteniendo un anclaje creíble de expectativas. En 2024, la inflaci&oacute;n retrocedi&oacute; hacia el 3.5%, aunque el conflicto presion&oacute; al alza el gasto p&uacute;blico y los precios de bienes estrat&eacute;gicos.</p>
+    </div>
+  </div>
+
+  <div class="nav-btns">
+    <a href="index.html" class="btn">&larr; Volver al Inicio</a>
+    <a href="pregunta2.html" class="btn btn-next">Pregunta 2: Shocks Geopol&iacute;ticos &rarr;</a>
+  </div>
+</div>
+</body>
+</html>
