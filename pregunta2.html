@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pregunta 2: Shocks Geopoliticos | Israel Econ DB</title>
+  <style>
+    :root{--bg-primary:#0f172a;--bg-secondary:#1e293b;--bg-card:#334155;--text-primary:#f8fafc;--text-secondary:#94a3b8;--accent:#ec4899;--accent-blue:#3b82f6;--accent-teal:#14b8a6;--accent-amber:#f59e0b;--border:#334155;--success:#10b981}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg-primary);color:var(--text-primary);line-height:1.6}
+    nav{background:rgba(15,23,42,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:1000;padding:1rem 0}
+    .nav-container{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;justify-content:space-between;align-items:center}
+    .nav-brand{font-size:1.1rem;font-weight:800;color:var(--accent-blue);text-decoration:none}
+    .nav-brand span{color:var(--accent)}
+    .nav-links{display:flex;gap:1.5rem;list-style:none}
+    .nav-links a{color:var(--text-secondary);text-decoration:none;font-size:.875rem;font-weight:500;padding:.4rem .6rem;border-radius:6px;transition:color .2s}
+    .nav-links a:hover{color:var(--text-primary);background:rgba(255,255,255,.05)}
+    .nav-links a.active{color:var(--accent)}
+    .container{max-width:1100px;margin:0 auto;padding:3rem 2rem}
+    .breadcrumb{font-size:.85rem;color:var(--text-secondary);margin-bottom:1.5rem}
+    .breadcrumb a{color:var(--accent-blue);text-decoration:none}
+    .page-header{margin-bottom:3rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .page-tag{display:inline-block;background:rgba(236,72,153,.1);color:var(--accent);border:1px solid rgba(236,72,153,.25);border-radius:6px;padding:.2rem .75rem;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:1rem}
+    h1{font-size:clamp(1.5rem,3vw,2.25rem);font-weight:800;letter-spacing:-.03em;line-height:1.2;margin-bottom:.75rem}
+    .subtitle{color:var(--text-secondary);font-size:1rem;line-height:1.7;max-width:700px}
+    .section{margin-bottom:4rem}
+    h2{font-size:1.35rem;font-weight:700;color:var(--accent);margin-bottom:1.5rem;display:flex;align-items:center;gap:.75rem}
+    h2::before{content:'';width:4px;height:20px;background:var(--accent);border-radius:2px;flex-shrink:0}
+    .data-table{width:100%;border-collapse:collapse;background:var(--bg-secondary);border-radius:12px;overflow:hidden;border:1px solid var(--border)}
+    .data-table th{background:var(--bg-card);padding:.875rem 1rem;text-align:left;font-size:.8rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--text-secondary);border-bottom:1px solid var(--border)}
+    .data-table td{padding:.875rem 1rem;font-size:.875rem;border-bottom:1px solid rgba(71,85,105,.3);color:var(--text-secondary)}
+    .data-table tr:last-child td{border-bottom:none}
+    .data-table tr:hover td{background:rgba(255,255,255,.03)}
+    .data-table .num{font-weight:600;color:var(--text-primary)}
+    .data-table .high{color:#ef4444;font-weight:700}.data-table .med{color:var(--accent-amber);font-weight:700}.data-table .low{color:var(--success);font-weight:700}
+    .kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;margin-bottom:3rem}
+    .kpi{background:var(--bg-secondary);border:1px solid var(--border);border-radius:12px;padding:1.5rem;position:relative;overflow:hidden}
+    .kpi::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+    .kpi.r::before{background:#ef4444}.kpi.p::before{background:var(--accent)}.kpi.b::before{background:var(--accent-blue)}.kpi.g::before{background:var(--success)}
+    .kpi-label{font-size:.75rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--text-secondary);margin-bottom:.5rem}
+    .kpi-value{font-size:1.75rem;font-weight:800;letter-spacing:-.03em;margin-bottom:.25rem}
+    .kpi.r .kpi-value{color:#ef4444}.kpi.p .kpi-value{color:var(--accent)}.kpi.b .kpi-value{color:var(--accent-blue)}.kpi.g .kpi-value{color:var(--success)}
+    .kpi-sub{font-size:.8rem;color:var(--text-secondary)}
+    .text-card{background:var(--bg-secondary);border:1px solid var(--border);border-radius:12px;padding:1.75rem;margin-bottom:1.5rem}
+    .text-card p{color:var(--text-secondary);line-height:1.8;margin-bottom:1rem}
+    .text-card p:last-child{margin-bottom:0}
+    .highlight{background:rgba(236,72,153,.08);border-left:3px solid var(--accent);padding:1rem 1.25rem;border-radius:0 8px 8px 0;margin:1rem 0;color:var(--text-secondary);font-size:.95rem;line-height:1.7}
+    .highlight strong{color:var(--text-primary)}
+    .event-list{display:grid;gap:1rem}
+    .event{background:var(--bg-secondary);border:1px solid var(--border);border-radius:10px;padding:1.25rem;display:flex;gap:1.25rem;align-items:flex-start}
+    .event-date{background:var(--bg-card);border-radius:8px;padding:.5rem .75rem;font-size:.8rem;font-weight:700;color:var(--text-primary);text-align:center;min-width:80px;flex-shrink:0}
+    .event-title{font-weight:700;color:var(--text-primary);margin-bottom:.25rem;font-size:.95rem}
+    .event-desc{font-size:.85rem;color:var(--text-secondary);line-height:1.6}
+    .badge{display:inline-block;padding:.2rem .6rem;border-radius:4px;font-size:.7rem;font-weight:700;margin-left:.5rem}
+    .badge.high{background:rgba(239,68,68,.15);color:#ef4444}
+    .badge.med{background:rgba(245,158,11,.15);color:var(--accent-amber)}
+    .nav-btns{display:flex;justify-content:space-between;margin-top:4rem;padding-top:2rem;border-top:1px solid var(--border);flex-wrap:wrap;gap:1rem}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.4rem;background:var(--bg-card);color:var(--text-primary);text-decoration:none;border-radius:8px;border:1px solid var(--border);font-size:.875rem;font-weight:600;transition:all .2s}
+    .btn:hover{background:var(--accent);border-color:var(--accent)}
+    .btn-next{background:var(--accent);border-color:var(--accent)}
+    @media(max-width:640px){.nav-links{display:none}.event{flex-direction:column}}
+  </style>
+</head>
+<body>
+<nav>
+  <div class="nav-container">
+    <a href="index.html" class="nav-brand">Israel<span>Econ</span>DB</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="pregunta1.html">PIB &amp; Inflaci&oacute;n</a></li>
+      <li><a href="pregunta2.html" class="active">Shocks Geopol&iacute;ticos</a></li>
+      <li><a href="pregunta3.html">Finanzas P&uacute;blicas</a></li>
+      <li><a href="pregunta4.html">Riesgo Pa&iacute;s</a></li>
+      <li><a href="pregunta5.html">Implicaciones</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+  <div class="breadcrumb"><a href="index.html">Inicio</a> / Pregunta 2 de 5</div>
+  <div class="page-header">
+    <div class="page-tag">Pregunta 02</div>
+    <h1>&iquest;C&oacute;mo afectaron los shocks geopol&iacute;ticos a la econom&iacute;a israelí?</h1>
+    <p class="subtitle">An&aacute;lisis de los eventos de seguridad y su transmisi&oacute;n a variables macroecon&oacute;micas: tipo de cambio, bolsa, inversi&oacute;n y expectativas durante 2020&ndash;2024.</p>
+  </div>
+
+  <div class="kpi-grid">
+    <div class="kpi r"><div class="kpi-label">Depreciaci&oacute;n s&eacute;quel 2023</div><div class="kpi-value">-10%</div><div class="kpi-sub">ILS/USD en Q4 2023</div></div>
+    <div class="kpi p"><div class="kpi-label">Ca&iacute;da TA-125 oct 2023</div><div class="kpi-value">-12%</div><div class="kpi-sub">Primer mes tras el 7-O</div></div>
+    <div class="kpi b"><div class="kpi-label">IED 2024</div><div class="kpi-value">+18%</div><div class="kpi-sub">Sorpresa: record de IED tech</div></div>
+    <div class="kpi g"><div class="kpi-label">Reservas internacionales</div><div class="kpi-value">$220k M</div><div class="kpi-sub">Col ch&oacute;n de estabilidad</div></div>
+  </div>
+
+  <div class="section">
+    <h2>Cronolog&iacute;a de Eventos Geopol&iacute;ticos Clave</h2>
+    <div class="event-list">
+      <div class="event">
+        <div class="event-date">May 2021</div>
+        <div><div class="event-title">Operaci&oacute;n Guardia de Muros <span class="badge med">MEDIO</span></div><div class="event-desc">Conflicto de 11 d&iacute;as con Gaza. Impacto limitado: TA-35 cay&oacute; 3%, se recuper&oacute; en 2 semanas. Demuestra resiliencia institucional.</div></div>
+      </div>
+      <div class="event">
+        <div class="event-date">Ene 2023</div>
+        <div><div class="event-title">Crisis constitucional interna <span class="badge med">MEDIO</span></div><div class="event-desc">Reforma judicial genera protestas masivas. El s&eacute;quel pierde 5% frente al d&oacute;lar. El Banco de Israel interviene en cambiario.</div></div>
+      </div>
+      <div class="event">
+        <div class="event-date">7 Oct 2023</div>
+        <div><div class="event-title">Ataque de Hamas e inicio guerra Gaza <span class="badge high">ALTO</span></div><div class="event-desc">El shock m&aacute;s severo del per&iacute;odo. S&eacute;quel -10%, TA-125 -12%, CDS sube 80pb. M&aacute;s de 360.000 reservistas movilizados. Turismo colapsa -80%.</div></div>
+      </div>
+      <div class="event">
+        <div class="event-date">Abr 2024</div>
+        <div><div class="event-title">Ataque directo de Ir&aacute;n <span class="badge high">ALTO</span></div><div class="event-desc">Primer ataque directo iran&iacute; con misiles y drones. Mercados abren a la baja pero cierran con leve recuperaci&oacute;n: los mercados ya hab&iacute;an descontado riesgos.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Transmisi&oacute;n Econ&oacute;mica de los Shocks</h2>
+    <table class="data-table">
+      <thead>
+        <tr><th>Canal</th><th>Impacto observado</th><th>Intensidad</th><th>Recuperaci&oacute;n</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Tipo de cambio (ILS/USD)</td><td class="num">-10% en Q4 2023</td><td class="high">Alta</td><td>Parcial (6-8 meses)</td></tr>
+        <tr><td>Bolsa TA-125</td><td class="num">-12% octubre 2023</td><td class="high">Alta</td><td>Completa (12 meses)</td></tr>
+        <tr><td>Turismo internacional</td><td class="num">-80% arr. 2023-2024</td><td class="high">Muy Alta</td><td>Pendiente</td></tr>
+        <tr><td>Exportaciones mercanc&iacute;as</td><td class="num">-5% en 2024</td><td class="med">Media</td><td>Progresiva</td></tr>
+        <tr><td>Exportaciones servicios tech</td><td class="num">+4% en 2024</td><td class="low">Positiva</td><td>N/A (resiliencia)</td></tr>
+        <tr><td>Construcci&oacute;n y vivienda</td><td class="num">-15% inicios 2024</td><td class="high">Alta</td><td>Lenta</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>An&aacute;lisis: Resiliencia Adaptativa</h2>
+    <div class="text-card">
+      <p>El caso israelí ilustra el concepto de "resiliencia adaptativa": la capacidad de mantener funcionamiento econ&oacute;mico bajo amenaza persistente mediante mecanismos institucionales, tecnol&oacute;gicos y financieros especializados. A diferencia de econom&iacute;as similares, Israel no experimento crisis cambiaria severa ni p&aacute;nico bancario.</p>
+      <div class="highlight"><strong>Paradoja observada:</strong> La IED en 2024 alcanz&oacute; r&eacute;cord gracias al sector deftech y ciberseguridad, sectores que <em>crecen</em> en contextos de conflicto. El shock geopol&iacute;tico impact&oacute; sectorialmente de forma asim&eacute;trica.</div>
+    </div>
+  </div>
+
+  <div class="nav-btns">
+    <a href="pregunta1.html" class="btn">&larr; Pregunta 1: PIB e Inflaci&oacute;n</a>
+    <a href="pregunta3.html" class="btn btn-next">Pregunta 3: Finanzas P&uacute;blicas &rarr;</a>
+  </div>
+</div>
+</body>
+</html>
