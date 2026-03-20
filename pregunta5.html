@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pregunta 5: Implicaciones de Politica Publica | Israel Econ DB</title>
+  <style>
+    :root{--bg-primary:#0f172a;--bg-secondary:#1e293b;--bg-card:#334155;--text-primary:#f8fafc;--text-secondary:#94a3b8;--accent:#a855f7;--accent-blue:#3b82f6;--accent-pink:#ec4899;--accent-teal:#14b8a6;--accent-amber:#f59e0b;--border:#334155;--success:#10b981}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg-primary);color:var(--text-primary);line-height:1.6}
+    nav{background:rgba(15,23,42,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:1000;padding:1rem 0}
+    .nav-container{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;justify-content:space-between;align-items:center}
+    .nav-brand{font-size:1.1rem;font-weight:800;color:var(--accent-blue);text-decoration:none}
+    .nav-brand span{color:var(--accent-pink)}
+    .nav-links{display:flex;gap:1.5rem;list-style:none}
+    .nav-links a{color:var(--text-secondary);text-decoration:none;font-size:.875rem;font-weight:500;padding:.4rem .6rem;border-radius:6px;transition:color .2s}
+    .nav-links a:hover{color:var(--text-primary);background:rgba(255,255,255,.05)}
+    .nav-links a.active{color:var(--accent)}
+    .container{max-width:1100px;margin:0 auto;padding:3rem 2rem}
+    .breadcrumb{font-size:.85rem;color:var(--text-secondary);margin-bottom:1.5rem}
+    .breadcrumb a{color:var(--accent-blue);text-decoration:none}
+    .page-header{margin-bottom:3rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .page-tag{display:inline-block;background:rgba(168,85,247,.1);color:var(--accent);border:1px solid rgba(168,85,247,.25);border-radius:6px;padding:.2rem .75rem;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:1rem}
+    h1{font-size:clamp(1.5rem,3vw,2.25rem);font-weight:800;letter-spacing:-.03em;line-height:1.2;margin-bottom:.75rem}
+    .subtitle{color:var(--text-secondary);font-size:1rem;line-height:1.7;max-width:700px}
+    .section{margin-bottom:4rem}
+    h2{font-size:1.35rem;font-weight:700;color:var(--accent);margin-bottom:1.5rem;display:flex;align-items:center;gap:.75rem}
+    h2::before{content:'';width:4px;height:20px;background:var(--accent);border-radius:2px;flex-shrink:0}
+    .rec-grid{display:grid;gap:1.25rem}
+    .rec{background:var(--bg-secondary);border:1px solid var(--border);border-radius:12px;padding:1.5rem;display:flex;gap:1.25rem;align-items:flex-start}
+    .rec-icon{width:48px;height:48px;background:var(--accent);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0}
+    .rec-title{font-weight:700;color:var(--text-primary);margin-bottom:.35rem;font-size:1rem}
+    .rec-desc{font-size:.875rem;color:var(--text-secondary);line-height:1.7}
+    .text-card{background:var(--bg-secondary);border:1px solid var(--border);border-radius:12px;padding:1.75rem;margin-bottom:1.5rem}
+    .text-card p{color:var(--text-secondary);line-height:1.8;margin-bottom:1rem}
+    .text-card p:last-child{margin-bottom:0}
+    .highlight{background:rgba(168,85,247,.08);border-left:3px solid var(--accent);padding:1rem 1.25rem;border-radius:0 8px 8px 0;margin:1rem 0;color:var(--text-secondary);font-size:.95rem;line-height:1.7}
+    .highlight strong{color:var(--text-primary)}
+    .framework{background:var(--bg-secondary);border:2px solid var(--accent);border-radius:12px;padding:2rem;margin:2rem 0}
+    .framework-title{text-align:center;font-weight:700;color:var(--accent);margin-bottom:.5rem;font-size:1.1rem}
+    .framework-sub{text-align:center;color:var(--text-secondary);font-size:.875rem;margin-bottom:1.5rem}
+    .fw-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem}
+    .fw-item{background:var(--bg-primary);border-radius:8px;padding:1rem;text-align:center}
+    .fw-item h4{color:var(--text-primary);font-size:.9rem;margin-bottom:.4rem}
+    .fw-item p{color:var(--text-secondary);font-size:.8rem;line-height:1.5}
+    .conclusion{background:rgba(168,85,247,.06);border:1px solid rgba(168,85,247,.2);border-radius:12px;padding:1.75rem}
+    .conclusion p{color:var(--text-secondary);line-height:1.8;font-size:.975rem}
+    .nav-btns{display:flex;justify-content:space-between;margin-top:4rem;padding-top:2rem;border-top:1px solid var(--border);flex-wrap:wrap;gap:1rem}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.4rem;background:var(--bg-card);color:var(--text-primary);text-decoration:none;border-radius:8px;border:1px solid var(--border);font-size:.875rem;font-weight:600;transition:all .2s}
+    .btn:hover{background:var(--accent);border-color:var(--accent)}
+    .btn-home{background:var(--accent-blue);border-color:var(--accent-blue)}
+    @media(max-width:768px){.fw-grid{grid-template-columns:1fr}}
+    @media(max-width:640px){.nav-links{display:none}.rec{flex-direction:column}}
+  </style>
+</head>
+<body>
+<nav>
+  <div class="nav-container">
+    <a href="index.html" class="nav-brand">Israel<span>Econ</span>DB</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="pregunta1.html">PIB &amp; Inflaci&oacute;n</a></li>
+      <li><a href="pregunta2.html">Shocks Geopol&iacute;ticos</a></li>
+      <li><a href="pregunta3.html">Finanzas P&uacute;blicas</a></li>
+      <li><a href="pregunta4.html">Riesgo Pa&iacute;s</a></li>
+      <li><a href="pregunta5.html" class="active">Implicaciones</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+  <div class="breadcrumb"><a href="index.html">Inicio</a> / Pregunta 5 de 5</div>
+  <div class="page-header">
+    <div class="page-tag">Pregunta 05 &mdash; Final</div>
+    <h1>&iquest;Qu&eacute; implicaciones tienen estos patrones para el dise&ntilde;o de pol&iacute;ticas p&uacute;blicas?</h1>
+    <p class="subtitle">Recomendaciones basadas en evidencia para pol&iacute;tica monetaria, fiscal y estabilidad regional en econom&iacute;as peque&ntilde;as abiertas expuestas a shocks de seguridad.</p>
+  </div>
+
+  <div class="section">
+    <h2>Marco Pol&iacute;tico: PECS</h2>
+    <div class="framework">
+      <div class="framework-title">Framework: Pol&iacute;tica Econ&oacute;mica en Contextos de Seguridad (PECS)</div>
+      <div class="framework-sub">Basado en evidencia emp&iacute;rica del dataset Israel 2020&ndash;2024</div>
+      <div class="fw-grid">
+        <div class="fw-item"><h4>&#x1F3AF; Pol&iacute;tica Monetaria</h4><p>Anclaje credibilidad sobre ajuste mec&aacute;nico. Tasa estable (4.5%) durante guerra gener&oacute; confianza cambiaria.</p></div>
+        <div class="fw-item"><h4>&#x1F4B0; Pol&iacute;tica Fiscal</h4><p>Acumulaci&oacute;n preventiva de reservas sobre austeridad proc&iacute;clica. Deuda "productiva" vs. "consumo".</p></div>
+        <div class="fw-item"><h4>&#x1F6E1;&#xFE0F; Gesti&oacute;n de Riesgos</h4><p>Diversificaci&oacute;n sectorial tech/defensa. Redundancia en cadenas de suministro cr&iacute;ticas.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Recomendaciones de Pol&iacute;tica P&uacute;blica</h2>
+    <div class="rec-grid">
+      <div class="rec">
+        <div class="rec-icon">&#x1F3E6;</div>
+        <div>
+          <div class="rec-title">Pol&iacute;tica Monetaria: Flexibilidad con Anclaje</div>
+          <div class="rec-desc">El Banco de Israel demostr&oacute; que mantener tasas estables durante shocks de seguridad puede ser m&aacute;s efectivo que ajustes proc&iacute;clicos. Construir "colchones de credibilidad" en per&iacute;odos de calma para desplegarlos durante crisis.</div>
+        </div>
+      </div>
+      <div class="rec">
+        <div class="rec-icon">&#x1F4CA;</div>
+        <div>
+          <div class="rec-title">Pol&iacute;tica Fiscal: Reglas de Super&aacute;vit Estructural Adaptativas</div>
+          <div class="rec-desc">Dado el bajo multiplicador fiscal del gasto militar (0.3&ndash;0.4 vs. 0.8&ndash;1.2 en gasto civil), las reglas fiscales deben diferenciar entre "inversi&oacute;n de seguridad" y "consumo militar". Establecer fondos de estabilizaci&oacute;n financiados con impuestos temporales en per&iacute;odos de paz.</div>
+        </div>
+      </div>
+      <div class="rec">
+        <div class="rec-icon">&#x1F30D;</div>
+        <div>
+          <div class="rec-title">Gesti&oacute;n de Reservas: Umbrales Diferenciados</div>
+          <div class="rec-desc">Reservas superiores al 40% del PIB anulan la correlaci&oacute;n est&aacute;ndar entre deuda/PIB y riesgo soberano. Econom&iacute;as expuestas a shocks geopol&iacute;ticos deben apuntar a rangos del 35&ndash;45% del PIB.</div>
+        </div>
+      </div>
+      <div class="rec">
+        <div class="rec-icon">&#x1F3ED;</div>
+        <div>
+          <div class="rec-title">Diversificaci&oacute;n Econ&oacute;mica: Resiliencia Sectorial</div>
+          <div class="rec-desc">La recuperaci&oacute;n del TA-125 liderada por defensa (+116%) y tecnolog&iacute;a sugiere que la diversificaci&oacute;n hacia sectores "estrat&eacute;gicos de exportaci&oacute;n" reduce vulnerabilidad a shocks de turismo y comercio tradicional.</div>
+        </div>
+      </div>
+      <div class="rec">
+        <div class="rec-icon">&#x1F91D;</div>
+        <div>
+          <div class="rec-title">Cooperaci&oacute;n Regional: Acuerdos de Liquidez</div>
+          <div class="rec-desc">Explorar "Acuerdos de Liquidez de Seguridad" (SLA) entre econom&iacute;as regionales, donde reservas colectivas act&uacute;en como seguro contra shocks idiosincr&aacute;sicos no replicables individualmente.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Conclusi&oacute;n Final</h2>
+    <div class="conclusion">
+      <p>El dataset Israel 2020&ndash;2024 demuestra que la resiliencia econ&oacute;mica en contextos de conflicto prolongado es posible, pero depende de una configuraci&oacute;n espec&iacute;fica: instituciones financieras s&oacute;lidas, acumulaci&oacute;n preventiva de reservas, diversificaci&oacute;n sectorial hacia tecnolog&iacute;a y defensa, y mecanismos de financiaci&oacute;n externos.</p>
+      <p style="margin-top:1rem">Para la comunidad internacional, la implicaci&oacute;n clave es la necesidad de redise&ntilde;ar marcos de sostenibilidad fiscal que incorporen "capacidad de absorci&oacute;n institucional" como variable central, reconociendo que la resiliencia econ&oacute;mica en conflictos es un bien p&uacute;blico global con externalidades ambivalentes.</p>
+    </div>
+  </div>
+
+  <div class="nav-btns">
+    <a href="pregunta4.html" class="btn">&larr; Pregunta 4: Riesgo Pa&iacute;s</a>
+    <a href="index.html" class="btn btn-home">Volver al Inicio &rarr;</a>
+  </div>
+</div>
+</body>
+</html>
