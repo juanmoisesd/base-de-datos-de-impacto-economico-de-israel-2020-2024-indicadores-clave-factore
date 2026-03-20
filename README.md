@@ -38,8 +38,7 @@ El dataset está diseñado siguiendo principios de datos abiertos y reutilizaci�
 
 Visualización avanzada del dataset (gráficos, filtros y exploración interactiva):
 
-👉 https://juanmoisesd.github.io/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factores-principales-e-indices-financieros/
-
+👉 [https://juanmoisesd.github.io/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factores-principales-e-indices-financieros](https://github.com/juanmoisesd/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore/blob/main/index.html)
 ---
 
 ## 🧩 Estructura del Dataset
