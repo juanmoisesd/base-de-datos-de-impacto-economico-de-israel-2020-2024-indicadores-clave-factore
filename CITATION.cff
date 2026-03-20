@@ -1,20 +1,48 @@
 cff-version: 1.2.0
 message: "Please cite this dataset using the metadata below."
 type: dataset
-title: "Base de Datos de Impacto Económico de Israel (2020-2024): Indicadores Clave, Factores Principales e Índices Financieros"
+title: "Base de Datos de Impacto Económico de Israel (2020–2024): Indicadores Macroeconómicos, Factores Estructurales e Índices Financieros"
+version: "1.0.0"
+abstract: >
+  Open-access dataset compiling key economic indicators for Israel between 2020 and 2024,
+  including macroeconomic variables, structural factors, and selected financial indices.
+  The dataset is designed to support comparative economic analysis, policy assessment,
+  regional studies, and research on the interaction between economic performance and
+  geopolitical context in the Middle East.
 authors:
   - family-names: "de la Serna Tuya"
     given-names: "Juan Moisés"
     orcid: "https://orcid.org/0000-0002-8401-8018"
     affiliation: "Universidad Internacional de La Rioja (UNIR)"
 doi: "10.5281/zenodo.18879626"
-url: "https://doi.org/10.5281/zenodo.18879626"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.18879626"
 repository-code: "https://github.com/juanmoisesd/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore"
-license: CC0-1.0
+url: "https://doi.org/10.5281/zenodo.18879626"
+license: "CC0-1.0"
 date-released: "2026-03-05"
+lang: "es"
 keywords:
   - "Israel"
-  - "macroeconomía"
-  - "PIB"
-  - "inflación"
-  - "Oriente Medio"
+  - "economic impact"
+  - "macroeconomics"
+  - "GDP"
+  - "inflation"
+  - "financial indices"
+  - "Middle East"
+  - "geopolitics"
+  - "economic indicators"
+  - "open data"
+preferred-citation:
+  type: dataset
+  authors:
+    - family-names: "de la Serna Tuya"
+      given-names: "Juan Moisés"
+      orcid: "https://orcid.org/0000-0002-8401-8018"
+      affiliation: "Universidad Internacional de La Rioja (UNIR)"
+  title: "Base de Datos de Impacto Económico de Israel (2020–2024): Indicadores Macroeconómicos, Factores Estructurales e Índices Financieros"
+  doi: "10.5281/zenodo.18879626"
+  url: "https://doi.org/10.5281/zenodo.18879626"
+  date-released: "2026-03-05"
+  license: "CC0-1.0"
