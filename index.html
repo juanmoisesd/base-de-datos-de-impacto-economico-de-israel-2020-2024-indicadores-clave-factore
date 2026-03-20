@@ -1,499 +1,592 @@
-<!-- pregunta5.html - Implicaciones Políticas -->
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pregunta 5: Implicaciones Políticas | Israel Econ DB</title>
-    <style>
-        :root {
-            --bg-primary: #0f172a;
-            --bg-secondary: #1e293b;
-            --bg-card: #334155;
-            --text-primary: #f8fafc;
-            --text-secondary: #cbd5e1;
-            --accent: #ec4899;
-            --accent-light: #f472b6;
-            --border: #475569;
-            --success: #10b981;
-            --warning: #f59e0b;
-        }
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.6;
-        }
-        
-        nav {
-            background: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            padding: 1rem 0;
-        }
-        
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .nav-brand {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--accent-light);
-            text-decoration: none;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-        
-        .nav-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: color 0.3s;
-            padding: 0.5rem 0;
-            border-bottom: 2px solid transparent;
-        }
-        
-        .nav-links a:hover, .nav-links a.active {
-            color: var(--accent-light);
-            border-bottom-color: var(--accent);
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
-        }
-        
-        .breadcrumb {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-        
-        .breadcrumb a {
-            color: var(--accent-light);
-            text-decoration: none;
-        }
-        
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-        }
-        
-        .subtitle {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-            margin-bottom: 3rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid var(--border);
-        }
-        
-        .section {
-            margin-bottom: 4rem;
-        }
-        
-        h2 {
-            font-size: 1.5rem;
-            color: var(--accent-light);
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-        
-        h2::before {
-            content: "";
-            width: 4px;
-            height: 24px;
-            background: var(--accent);
-            border-radius: 2px;
-        }
-        
-        .content-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            margin-bottom: 2rem;
-        }
-        
-        @media (max-width: 900px) {
-            .content-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        .text-block {
-            background: var(--bg-secondary);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-        }
-        
-        .text-block p {
-            margin-bottom: 1rem;
-            color: var(--text-secondary);
-            text-align: justify;
-        }
-        
-        .highlight-box {
-            background: rgba(236, 72, 153, 0.1);
-            border-left: 4px solid var(--accent);
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            border-radius: 0 8px 8px 0;
-        }
-        
-        .highlight-box.success {
-            background: rgba(16, 185, 129, 0.1);
-            border-left-color: var(--success);
-        }
-        
-        .recommendations {
-            display: grid;
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        
-        .rec-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 1.5rem;
-            display: flex;
-            gap: 1.5rem;
-            align-items: flex-start;
-        }
-        
-        .rec-icon {
-            width: 48px;
-            height: 48px;
-            background: var(--accent);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            flex-shrink: 0;
-        }
-        
-        .rec-content h3 {
-            color: var(--text-primary);
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-        
-        .rec-content p {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-        
-        .references {
-            background: var(--bg-secondary);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-        }
-        
-        .references h3 {
-            color: var(--accent-light);
-            margin-bottom: 1rem;
-        }
-        
-        .references p {
-            margin-bottom: 0.75rem;
-            padding-left: 2rem;
-            text-indent: -2rem;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            line-height: 1.8;
-        }
-        
-        .insight-badge {
-            display: inline-block;
-            background: var(--accent);
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        
-        .nav-buttons {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 4rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--border);
-        }
-        
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.75rem 1.5rem;
-            background: var(--bg-card);
-            color: var(--text-primary);
-            text-decoration: none;
-            border-radius: 8px;
-            border: 1px solid var(--border);
-            transition: all 0.3s;
-        }
-        
-        .btn:hover {
-            background: var(--accent);
-            border-color: var(--accent);
-        }
-        
+    <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Israel Econ DB 2020-2024 | Impacto Economico</title>
+      <style>
+              :root {
+                        --bg-primary: #0f172a;
+                        --bg-secondary: #1e293b;
+                        --bg-card: #334155;
+                        --text-primary: #f8fafc;
+                        --text-secondary: #94a3b8;
+                        --accent: #3b82f6;
+                        --accent-pink: #ec4899;
+                        --accent-teal: #14b8a6;
+                        --accent-amber: #f59e0b;
+                        --border: #334155;
+                        --success: #10b981;
+                        --glow: rgba(59, 130, 246, 0.15);
+              }
+              * { margin: 0; padding: 0; box-sizing: border-box; }
+              html { scroll-behavior: smooth; }
+              body {
+                        font-family: 'Segoe UI', system-ui, sans-serif;
+                        background: var(--bg-primary);
+                        color: var(--text-primary);
+                        line-height: 1.6;
+              }
+
+              /* NAV */
+              nav {
+                        background: rgba(15, 23, 42, 0.92);
+                        backdrop-filter: blur(12px);
+                        border-bottom: 1px solid var(--border);
+                        position: sticky;
+                        top: 0;
+                        z-index: 1000;
+                        padding: 1rem 0;
+              }
+              .nav-container {
+                        max-width: 1200px;
+                        margin: 0 auto;
+                        padding: 0 2rem;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+              }
+              .nav-brand {
+                        font-size: 1.1rem;
+                        font-weight: 800;
+                        color: var(--accent);
+                        text-decoration: none;
+                        letter-spacing: -0.02em;
+              }
+              .nav-brand span { color: var(--accent-pink); }
+              .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+              .nav-links a {
+                        color: var(--text-secondary);
+                        text-decoration: none;
+                        font-size: 0.875rem;
+                        font-weight: 500;
+                        transition: color 0.2s;
+                        padding: 0.4rem 0.6rem;
+                        border-radius: 6px;
+              }
+              .nav-links a:hover { color: var(--text-primary); background: rgba(255,255,255,0.05); }
+              .nav-links a.active { color: var(--accent); }
+
+              /* HERO */
+              .hero {
+                        min-height: 90vh;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        padding: 4rem 2rem;
+                        position: relative;
+                        overflow: hidden;
+              }
+              .hero::before {
+                        content: '';
+                        position: absolute;
+                        inset: 0;
+                        background: radial-gradient(ellipse 80% 60% at 50% 30%, rgba(59,130,246,0.12) 0%, transparent 70%),
+                                              radial-gradient(ellipse 50% 40% at 80% 80%, rgba(236,72,153,0.08) 0%, transparent 60%);
+                        pointer-events: none;
+              }
+              .hero-badge {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 0.5rem;
+                        background: rgba(59,130,246,0.12);
+                        border: 1px solid rgba(59,130,246,0.3);
+                        color: var(--accent);
+                        padding: 0.4rem 1rem;
+                        border-radius: 999px;
+                        font-size: 0.8rem;
+                        font-weight: 600;
+                        letter-spacing: 0.05em;
+                        text-transform: uppercase;
+                        margin-bottom: 1.5rem;
+              }
+              .hero-badge .dot {
+                        width: 6px; height: 6px;
+                        background: var(--accent);
+                        border-radius: 50%;
+                        animation: pulse 2s infinite;
+              }
+              @keyframes pulse {
+                        0%, 100% { opacity: 1; transform: scale(1); }
+                        50% { opacity: 0.5; transform: scale(0.8); }
+              }
+              .hero h1 {
+                        font-size: clamp(2rem, 5vw, 3.5rem);
+                        font-weight: 900;
+                        letter-spacing: -0.04em;
+                        line-height: 1.1;
+                        margin-bottom: 0.5rem;
+                        background: linear-gradient(135deg, #f8fafc 30%, #94a3b8 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+              }
+              .hero h1 .highlight {
+                        background: linear-gradient(135deg, #3b82f6, #ec4899);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                background-clip: text;
+              }
+              .hero-subtitle {
+                        font-size: 1.1rem;
+                        color: var(--text-secondary);
+                        max-width: 680px;
+                        margin: 1.25rem auto 2.5rem;
+                        line-height: 1.7;
+              }
+              .hero-actions {
+                        display: flex;
+                        gap: 1rem;
+                        flex-wrap: wrap;
+                        justify-content: center;
+              }
         .btn-primary {
-            background: var(--accent);
-            border-color: var(--accent);
+                  background: var(--accent);
+                  color: white;
+                  padding: 0.8rem 2rem;
+                  border-radius: 10px;
+                  text-decoration: none;
+                  font-weight: 600;
+                  font-size: 0.95rem;
+                  transition: all 0.2s;
+                  box-shadow: 0 4px 20px rgba(59,130,246,0.35);
         }
-        
-        .framework-box {
-            background: var(--bg-secondary);
-            border: 2px solid var(--accent);
-            border-radius: 12px;
-            padding: 2rem;
-            margin: 2rem 0;
+              .btn-primary:hover { background: #2563eb; box-shadow: 0 4px 28px rgba(59,130,246,0.5); transform: translateY(-1px); }
+              .btn-outline {
+                        background: transparent;
+                        color: var(--text-primary);
+                        padding: 0.8rem 2rem;
+                        border-radius: 10px;
+                        text-decoration: none;
+                        font-weight: 600;
+                        font-size: 0.95rem;
+                        border: 1px solid var(--border);
+                        transition: all 0.2s;
+              }
+              .btn-outline:hover { background: rgba(255,255,255,0.05); border-color: #475569; transform: translateY(-1px); }
+
+              /* STATS STRIP */
+              .stats-strip {
+                        background: var(--bg-secondary);
+                        border-top: 1px solid var(--border);
+                        border-bottom: 1px solid var(--border);
+                        padding: 2.5rem 2rem;
+              }
+              .stats-grid {
+                        max-width: 1200px;
+                        margin: 0 auto;
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                        gap: 2rem;
+                        text-align: center;
+              }
+              .stat-item {}
+              .stat-value {
+                        font-size: 2rem;
+                        font-weight: 800;
+                        letter-spacing: -0.03em;
+                        margin-bottom: 0.25rem;
+              }
+              .stat-value.blue { color: var(--accent); }
+              .stat-value.pink { color: var(--accent-pink); }
+              .stat-value.teal { color: var(--accent-teal); }
+              .stat-value.amber { color: var(--accent-amber); }
+              .stat-label {
+                        font-size: 0.8rem;
+                        color: var(--text-secondary);
+                        font-weight: 500;
+                        letter-spacing: 0.03em;
+                        text-transform: uppercase;
+              }
+
+              /* SECTIONS */
+              .section { padding: 5rem 2rem; }
+              .section-inner { max-width: 1200px; margin: 0 auto; }
+              .section-tag {
+                        display: inline-block;
+                        background: rgba(59,130,246,0.1);
+                        color: var(--accent);
+                        border: 1px solid rgba(59,130,246,0.25);
+                        border-radius: 6px;
+                        padding: 0.2rem 0.75rem;
+                        font-size: 0.75rem;
+                        font-weight: 700;
+                        letter-spacing: 0.08em;
+                        text-transform: uppercase;
+                        margin-bottom: 1rem;
+              }
+              .section-title {
+                        font-size: clamp(1.5rem, 3vw, 2.25rem);
+                        font-weight: 800;
+                        letter-spacing: -0.03em;
+                        margin-bottom: 0.75rem;
+                        line-height: 1.2;
+              }
+              .section-desc {
+                        color: var(--text-secondary);
+                        font-size: 1rem;
+                        max-width: 560px;
+                        margin-bottom: 3rem;
+                        line-height: 1.7;
+              }
+
+              /* QUESTION CARDS */
+              .questions-grid {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                        gap: 1.5rem;
+              }
+              .q-card {
+                        background: var(--bg-secondary);
+                        border: 1px solid var(--border);
+                        border-radius: 16px;
+                        padding: 1.75rem;
+                        text-decoration: none;
+                        color: inherit;
+                        transition: all 0.25s;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
+                        position: relative;
+                        overflow: hidden;
+              }
+              .q-card::before {
+                        content: '';
+                        position: absolute;
+                        top: 0; left: 0; right: 0;
+                        height: 3px;
+                        border-radius: 16px 16px 0 0;
+              }
+              .q-card.blue::before { background: linear-gradient(90deg, var(--accent), #818cf8); }
+              .q-card.pink::before { background: linear-gradient(90deg, var(--accent-pink), #f97316); }
+              .q-card.teal::before { background: linear-gradient(90deg, var(--accent-teal), #22c55e); }
+              .q-card.amber::before { background: linear-gradient(90deg, var(--accent-amber), #ef4444); }
+              .q-card.purple::before { background: linear-gradient(90deg, #a855f7, #3b82f6); }
+              .q-card:hover {
+                        border-color: #475569;
+                        transform: translateY(-4px);
+                        box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+              }
+              .q-number {
+                        font-size: 0.7rem;
+                        font-weight: 700;
+                        letter-spacing: 0.1em;
+                        text-transform: uppercase;
+                        color: var(--text-secondary);
+              }
+              .q-icon {
+                        font-size: 2rem;
+                        margin-bottom: 0.25rem;
+              }
+              .q-title {
+                        font-size: 1rem;
+                        font-weight: 700;
+                        color: var(--text-primary);
+                        line-height: 1.4;
+                        flex: 1;
+              }
+              .q-desc {
+                        font-size: 0.85rem;
+                        color: var(--text-secondary);
+                        line-height: 1.6;
+              }
+              .q-link {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 0.35rem;
+                        font-size: 0.82rem;
+                        font-weight: 600;
+                        margin-top: 0.5rem;
+              }
+              .q-card.blue .q-link { color: var(--accent); }
+              .q-card.pink .q-link { color: var(--accent-pink); }
+              .q-card.teal .q-link { color: var(--accent-teal); }
+              .q-card.amber .q-link { color: var(--accent-amber); }
+              .q-card.purple .q-link { color: #a855f7; }
+
+              /* ABOUT SECTION */
+              .about-section {
+                        background: var(--bg-secondary);
+                        border-top: 1px solid var(--border);
+              }
+              .about-grid {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 4rem;
+                        align-items: center;
+              }
+              @media (max-width: 768px) {
+                        .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+              }
+              .about-text h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 1rem; letter-spacing: -0.03em; }
+              .about-text p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1rem; font-size: 0.95rem; }
+              .sources-list {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 0.75rem;
+              }
+              .source-badge {
+                        background: var(--bg-card);
+                        border: 1px solid var(--border);
+                        border-radius: 10px;
+                        padding: 0.75rem 1rem;
+                        font-size: 0.8rem;
+                        font-weight: 600;
+                        color: var(--text-secondary);
+                        display: flex;
+                        align-items: center;
+                        gap: 0.5rem;
+              }
+              .source-badge .icon { font-size: 1rem; }
+
+              /* DOI CARD */
+              .doi-card {
+                        background: rgba(59,130,246,0.07);
+                        border: 1px solid rgba(59,130,246,0.25);
+                        border-radius: 12px;
+                        padding: 1.25rem 1.5rem;
+                        margin-top: 2rem;
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+              }
+              .doi-card .doi-label {
+                        font-size: 0.7rem;
+                        font-weight: 700;
+                        letter-spacing: 0.08em;
+                        text-transform: uppercase;
+                        color: var(--accent);
+                        margin-bottom: 0.2rem;
+              }
+              .doi-card a {
+                        color: var(--text-primary);
+                        text-decoration: none;
+                        font-size: 0.9rem;
+                        font-weight: 500;
+              }
+              .doi-card a:hover { color: var(--accent); }
+
+              /* FOOTER */
+              footer {
+                        background: #080f1e;
+                        border-top: 1px solid var(--border);
+                        padding: 2.5rem 2rem;
+                        text-align: center;
+              }
+              .footer-inner { max-width: 1200px; margin: 0 auto; }
+        .footer-brand {
+          font-size: 1rem;
+                        font-weight: 700;
+                  color: var(--accent);
+                  margin-bottom: 0.5rem;
         }
-        
-        .framework-box h3 {
-            color: var(--accent-light);
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-        
-        .framework-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-        
-        .framework-item {
-            text-align: center;
-            padding: 1rem;
-            background: var(--bg-primary);
-            border-radius: 8px;
-        }
-        
-        .framework-item h4 {
-            color: var(--text-primary);
-            margin-bottom: 0.5rem;
-            font-size: 0.9rem;
-        }
-        
-        .framework-item p {
-            color: var(--text-secondary);
-            font-size: 0.8rem;
-        }
-    </style>
-</head>
-<body>
-    <nav>
-        <div class="nav-container">
-            <a href="index.html" class="nav-brand">Israel Econ DB 2020-2024</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="pregunta1.html">PIB & Inflación</a></li>
-                <li><a href="pregunta2.html">Shocks Geopolíticos</a></li>
-                <li><a href="pregunta3.html">Finanzas Públicas</a></li>
-                <li><a href="pregunta4.html">Riesgo País</a></li>
-                <li><a href="pregunta5.html" class="active">Implicaciones</a></li>
-            </ul>
-        </div>
-    </nav>
+              .footer-text {
+                        color: var(--text-secondary);
+                        font-size: 0.82rem;
+                        margin-bottom: 1rem;
+              }
+              .footer-license {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 0.4rem;
+                        background: rgba(16,185,129,0.1);
+                        border: 1px solid rgba(16,185,129,0.25);
+                        color: var(--success);
+                        padding: 0.3rem 0.8rem;
+                        border-radius: 6px;
+                        font-size: 0.75rem;
+                        font-weight: 600;
+                        text-decoration: none;
+              }
+
+              @media (max-width: 640px) {
+                        .nav-links { display: none; }
+                        .hero { min-height: 75vh; }
+                        .questions-grid { grid-template-columns: 1fr; }
+                        .sources-list { grid-template-columns: 1fr; }
+              }
+            </style>
+    </head>
+    <body>
+
+        <nav>
+              <div class="nav-container">
+                      <a href="index.html" class="nav-brand">Israel<span>Econ</span>DB</a>a>
+                  <ul class="nav-links">
+                        <li><a href="index.html" class="active">Inicio</a>a></li>
+                        <li><a href="pregunta1.html">PIB &amp; Inflaci&oacute;n</a>a></li>
+                        <li><a href="pregunta2.html">Shocks Geopol&iacute;ticos</a>a></li>
+                        <li><a href="pregunta3.html">Finanzas P&uacute;blicas</a>a></li>
+                        <li><a href="pregunta4.html">Riesgo Pa&iacute;s</a>a></li>
+                        <li><a href="pregunta5.html">Implicaciones</a>a></li>
+                  </ul>ul>
+              </div>div>
+        </nav>
     
-    <div class="container">
-        <div class="breadcrumb">
-            <a href="index.html">Inicio</a> / Pregunta 5 de 5
-        </div>
-        
-        <h1>¿Qué implicaciones tienen estos patrones para el diseño de políticas públicas y la estabilidad regional?</h1>
-        <p class="subtitle">Recomendaciones basadas en evidencia para política monetaria, fiscal y de estabilidad geopolítica en economías pequeñas abiertas expuestas a shocks de seguridad.</p>
-        
-        <div class="section">
-            <h2>Síntesis de Hallazgos Clave</h2>
-            <div class="content-grid">
-                <div class="text-block">
-                    <span class="insight-badge">Resumen Ejecutivo</span>
-                    <p>El análisis del dataset 2020-2024 revela que la economía israelí operó bajo dos regímenes estructurales distintos: (1) recuperación post-COVID con resiliencia fiscal notable (2020-2022), y (2) adaptación a shock geopolítico prolongado con histeresis negativa (2023-2024). Los hallazgos desafían paradigmas convencionales en tres dimensiones:</p>
-                    
-                    <ul style="margin: 1rem 0; padding-left: 2rem; color: var(--text-secondary); line-height: 1.8;">
-                        <li>Los mercados financieros exhibieron "resiliencia excesiva" (sobre-reacción positiva) ante eliminación de incertidumbre.</li>
-                        <li>El multiplicador fiscal militar fue significativamente menor (0.3-0.4) que en gasto civil, alterando cálculos de consolidación post-crisis.</li>
-                        <li>Las reservas internacionales explicaron mejor el riesgo soberano que la carga de deuda, invirtiendo jerarquías predictivas estándar.</li>
-                    </ul>
-                </div>
-                
-                <div class="text-block">
-                    <span class="insight-badge">Contribución al Conocimiento</span>
-                    <p>Este dataset constituye el primer registro sistemático que integra variables de riesgo geopolítico cuantificables (intensidad conflictiva, movilización reservistas, restricciones comerciales) con indicadores macroeconómicos de alta frecuencia para Israel. La contribución metodológica principal es la demostración de que, en economías con "resiliencia adaptativa" institucional, los shocks geopolíticos <em>confirmados</em> generan menor impacto económico que la <em>amenaza</em> de dichos shocks.</p>
-                    
-                    <div class="highlight-box success">
-                        <strong>Implicación teórica:</strong> Los modelos de "crisis de deuda" y "riesgo país" deben incorporar variables de "capacidad de absorción institucional" y "reservas de liquidez" como predictores principales, más allá de ratios de deuda stock.
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="section">
-            <h2>Marco de Política Económica para Economías en Conflicto</h2>
-            
-            <div class="framework-box">
-                <h3>Framework: Política Económica en Contextos de Seguridad (PECS)</h3>
-                <p style="text-align: center; color: var(--text-secondary); margin-bottom: 1rem;">
-                    Basado en evidencia empírica del dataset Israel 2020-2024
-                </p>
-                
-                <div class="framework-grid">
-                    <div class="framework-item">
-                        <h4>🎯 Política Monetaria</h4>
-                        <p>Anclaje credibilidad > ajuste mecánico. Tasa estable (4.5%) durante guerra generó confianza cambiaria.</p>
-                    </div>
-                    <div class="framework-item">
-                        <h4>💰 Política Fiscal</h4>
-                        <p>Acumulación preventiva de reservas > austeridad procíclica. Deuda "productiva" (defensa) vs. "consumo".</p>
-                    </div>
-                    <div class="framework-item">
-                        <h4>🛡️ Gestión de Riesgos</h4>
-                        <p>Diversificación sectorial tech/defensa. Redundancia en cadenas de suministro críticas.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="section">
-            <h2>Recomendaciones de Política Pública</h2>
-            
-            <div class="recommendations">
-                <div class="rec-card">
-                    <div class="rec-icon">🏦</div>
-                    <div class="rec-content">
-                        <h3>Política Monetaria: Flexibilidad con Anclaje</h3>
-                        <p>El Banco de Israel demostró que mantener tasas estables durante shocks de seguridad (4.5% 2023-2024) puede ser más efectivo que ajustes procíclicos, siempre que exista credibilidad institucional pre-establecida. Recomendación para economías similares: construir "colchones de credibilidad" en períodos de calma para desplegarlos durante crisis.</p>
-                    </div>
-                </div>
-                
-                <div class="rec-card">
-                    <div class="rec-icon">📊</div>
-                    <div class="rec-content">
-                        <h3>Política Fiscal: Reglas de Superávit Estructural Adaptativas</h3>
-                        <p>Dado el bajo multiplicador fiscal del gasto militar (0.3-0.4 vs. 0.8-1.2 en gasto civil), las reglas fiscales deben diferenciar entre "inversión de seguridad" (amortizable) y "consumo militar" (sostenibilidad comprometida). Se recomienda establecer "fondos de estabilización de seguridad" financiados con impuestos de guerra temporales durante períodos de paz.</p>
-                    </div>
-                </div>
-                
-                <div class="rec-card">
-                    <div class="rec-icon">🌐</div>
-                    <div class="rec-content">
-                        <h3>Gestión de Reservas: Umbrales Diferenciados</h3>
-                        <p>El dataset demuestra que reservas >40% del PIB anulan la correlación estándar entre deuda/PIB y riesgo soberano. Recomendación: economías expuestas a shocks geopolíticos deben mantener reservas internacionales superiores a estándares de Basel III (20-25%), apuntando a rangos del 35-45% del PIB.</p>
-                    </div>
-                </div>
-                
-                <div class="rec-card">
-                    <div class="rec-icon">🏭</div>
-                    <div class="rec-content">
-                        <h3>Diversificación Económica: Resiliencia Sectorial</h3>
-                        <p>La recuperación del TA-125 liderada por sector defensa (+116%) y tecnología sugiere que la diversificación hacia sectores "estratégicos de exportación" reduce vulnerabilidad a shocks de turismo/comercio tradicional. Políticas industriales deben priorizar "capacidades duales" (civil-militar) con demanda global estable.</p>
-                    </div>
-                </div>
-                
-                <div class="rec-card">
-                    <div class="rec-icon">🤝</div>
-                    <div class="rec-content">
-                        <h3>Cooperación Regional: Arreglos de Seguro Mutuo</h3>
-                        <p>La experiencia israelí de financiación vía diáspora no es replicable universalmente. Se recomienda explorar "Acuerdos de Líquidez de Seguridad" (Security Liquidity Agreements - SLA) entre economías regionales, donde reservas colectivas actúen como seguro contra shocks idiosincrásicos.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="section">
-            <h2>Implicaciones para Estabilidad Regional</h2>
-            <div class="text-block">
-                <p>Los hallazgos del dataset tienen implicaciones trascendentes para la teoría de conflictos y cooperación económica internacional:</p>
-                
-                <p><strong>1. Interdependencia asimétrica:</strong> La capacidad de Israel para mantener acceso a mercados financieros durante guerra activa (CDS estable, entradas de IED récord) crea un "paraguas de seguridad financiera" que reduce incentivos a la desescalada inmediata. Esto contrasta con economías sin acceso a reservas o financiación externa, donde costos económicos de conflicto actúan como freno.</p>
-                
-                <p><strong>2. Externalidades de estabilidad:</strong> La resiliencia financiera israelí generó externalidades positivas para la región (evitando contagio financiero), pero también permitió prolongación de conflicto sin colapso económico doméstico. Los datos sugieren una curva de "costo de oportunidad de paz" alterada: cuando economías pueden financiar guerra indefinidamente, los incentivos a negociación se reducen.</p>
-                
-                <p><strong>3. Lecciones para economías en desarrollo:</strong> Los mecanismos de resiliencia israelí (diáspora, ayuda militar estadounidense, reservas) no están disponibles para economías emergentes estándar. Intentar replicar estrategias fiscales israelíes (déficit 8.3%) sin estos colchones llevaría a crisis de deuda. Se requieren marcos de "resiliencia fiscal diferenciada" en estándares internacionales.</p>
-            </div>
-        </div>
-        
-        <div class="section">
-            <h2>Limitaciones y Futuras Investigaciones</h2>
-            <div class="text-block">
-                <p>El dataset presenta limitaciones que deben considerarse al interpretar los resultados:</p>
-                
-                <ul style="margin: 1rem 0; padding-left: 2rem; color: var(--text-secondary); line-height: 1.8;">
-                    <li><strong>Periodo corto:</strong> 5 años (2020-2024) capturan shocks específicos pero no ciclos completos de consolidación fiscal post-guerra.</li>
-                    <li><strong>Idiosincrasia israelí:</strong> Factores únicos (diáspora, ayuda EE.UU., sector tech avanzado) limitan generalización directa a otros casos.</li>
-                    <li><strong>Endogeneidad:</strong> La relación entre shocks geopolíticos y variables económicas es bidireccional; el dataset no establece causalidad estricta.</li>
-                </ul>
-                
-                <p><strong>Líneas futuras de investigación:</strong></p>
-                <ol style="margin: 1rem 0; padding-left: 2rem; color: var(--text-secondary); line-height: 1.8;">
-                    <li>Extensión temporal 2025-2030 para evaluar consolidación fiscal post-guerra.</li>
-                    <li>Comparación con casos de "resiliencia en conflicto": Taiwán, Corea del Sur, Colombia.</li>
-                    <li>Modelado de "umbrales de resiliencia": ¿cuándo los shocks geopolíticos se vuelven insostenibles económicamente?</li>
-                </ol>
-            </div>
-        </div>
-        
-        <div class="section">
-            <h2>Conclusión Final</h2>
-            <div class="highlight-box">
-                <p style="margin: 0; font-size: 1.05rem; line-height: 1.8;">
-                    El dataset Israel 2020-2024 demuestra que la resiliencia económica en contextos de conflicto prolongado es posible, pero depende de una configuración específica de instituciones financieras sólidas, acumulación preventiva de reservas, diversificación sectorial hacia tecnología/defensa, y mecanismos de financiación externos (diáspora, alianzas). Estos hallazgos desafían la presunción de que conflictos prolongados inevitablemente generan crisis económicas, pero también alertan sobre la reducción de incentivos a la paz cuando la financiación de guerra es sostenible indefinidamente. Para la comunidad internacional, la implicación clave es la necesidad de rediseñar marcos de sostenibilidad fiscal que incorporen "capacidad de absorción institucional" como variable central, reconociendo que la resiliencia económica en conflictos es un bien público global con externalidades ambivalentes.
-                </p>
-            </div>
-        </div>
-        
-        <div class="section">
-            <div class="references">
-                <h3>Referencias (APA 7)</h3>
-                <p>Acemoglu, D., & Robinson, J. A. (2012). <em>Why nations fail: The origins of power, prosperity, and poverty</em>. Crown Publishers.</p>
-                
-                <p>Aizenman, J., & Marion, N. (2004). International reserve holdings with sovereign risk and costly tax collection. <em>The Economic Journal</em>, 114(497), 569-591. https://doi.org/10.1111/j.1468-0297.2004.00227.x</p>
-                
-                <p>Bank of Israel. (2025). <em>Annual Report 2024: The Israeli Economy in 2024</em>. https://www.boi.org.il/media/upvdwfe5/2024-full-r.pdf</p>
-                
-                <p>Collier, P. (2007). <em>The bottom billion: Why the poorest countries are failing and what can be done about it</em>. Oxford University Press.</p>
-                
-                <p>International Monetary Fund. (2024). <em>World Economic Outlook: Policy Pivot, Rising Threats</em>. https://www.imf.org/en/Publications/WEO</p>
-                
-                <p>Organisation for Economic Co-operation and Development. (2023). <em>OECD Economic Surveys: Israel 2023</em>. OECD Publishing. https://doi.org/10.1787/surveys-isr-2023-en</p>
-                
-                <p>Rodrik, D. (2015). Premature deindustrialization. <em>Journal of Economic Growth</em>, 21(1), 1-33. https://doi.org/10.1007/s10887-015-9122-3</p>
-            </div>
-        </div>
-        
-        <div class="nav-buttons">
-            <a href="pregunta4.html" class="btn">← Pregunta 4: Riesgo País</a>
-            <a href="index.html" class="btn btn-primary">Volver al Inicio →</a>
-        </div>
-    </div>
-</body>
-</html>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-badge">
+          <span class="dot"></span>
+          Dataset Abierto &middot; CC0 License
+      </div>div>
+      <h1>Base de Datos de<br><span class="highlight">Impacto Econ&oacute;mico de Israel</span></h1>
+      <p class="hero-subtitle">
+        An&aacute;lisis sistem&aacute;tico de indicadores macroecon&oacute;micos, shocks geopo&iacute;ticos y finanzas p&uacute;blicas
+        de Israel durante el per&iacute;odo 2020&ndash;2024. Datos de TradingEconomics, World Bank, FMI y Bank of Israel.
+      </p>p>
+      <div class="hero-actions">
+          <a href="pregunta1.html" class="btn-primary">Explorar Datos &rarr;</a>a>
+          <a href="https://doi.org/10.5281/zenodo.1887" class="btn-outline" target="_blank">Ver DOI</a>a>
+      </div>div>
+    </section>section>
+    
+    <!-- STATS STRIP -->
+    <div class="stats-strip">
+      <div class="stats-grid">
+          <div class="stat-item">
+                <div class="stat-value blue">5</div>div>
+                <div class="stat-label">A&ntilde;os cubiertos</div>div>
+          </div>div>
+          <div class="stat-item">
+                <div class="stat-value pink">5</div>div>
+                <div class="stat-label">Preguntas de investigaci&oacute;n</div>div>
+          </div>div>
+          <div class="stat-item">
+                <div class="stat-value teal">4+</div>div>
+                <div class="stat-label">Fuentes institucionales</div>div>
+          </div>div>
+          <div class="stat-item">
+                <div class="stat-value amber">CC0</div>div>
+                <div class="stat-label">Licencia abierta</div>div>
+          </div>div>
+      </div>div>
+    </div>div>
+    
+    <!-- QUESTIONS SECTION -->
+    <section class="section">
+      <div class="section-inner">
+          <div class="section-tag">Preguntas de Investigaci&oacute;n</div>div>
+          <h2 class="section-title">Cinco dimensiones de an&aacute;lisis</h2>
+          <p class="section-desc">
+            El dataset organiza su evidencia en torno a cinco preguntas clave que cubren el arco completo del impacto econ&oacute;mico desde 2020 hasta 2024.
+          </p>p>
+      
+          <div class="questions-grid">
+          
+                <a href="pregunta1.html" class="q-card blue">
+                        <div>
+                                      <div class="q-number">Pregunta 01</div>
+                                      <div class="q-icon">📈</div>
+                        </div>
+                            <div class="q-title">PIB, Crecimiento e Inflaci&oacute;n</div>
+                            <div class="q-desc">Evoluci&oacute;n del producto interior bruto, tasas de crecimiento real e inflaci&oacute;n acumulada durante el per&iacute;odo analizado.</div>
+                            <div class="q-link">Explorar &rarr;</div>
+                </a>a>
+
+                    <a href="pregunta2.html" class="q-card pink">
+                                <div>
+                                              <div class="q-number">Pregunta 02</div>
+                                              <div class="q-icon">🛡️</div>
+                                </div>
+                                <div class="q-title">Shocks Geopol&iacute;ticos</div>
+                                <div class="q-desc">An&aacute;lisis de los choques ex&oacute;genos de seguridad y su transmisi&oacute;n a variables macroecon&oacute;micas clave.</div>
+                                <div class="q-link">Explorar &rarr;</div>
+                    </a>a>
+
+                    <a href="pregunta3.html" class="q-card teal">
+                                <div>
+                                              <div class="q-number">Pregunta 03</div>
+                                              <div class="q-icon">💰</div>
+                                </div>
+                                <div class="q-title">Finanzas P&uacute;blicas</div>
+                                <div class="q-desc">Deuda, d&eacute;ficit fiscal, gasto p&uacute;blico y sostenibilidad de las finanzas del Estado ante escenarios de guerra.</div>
+                                <div class="q-link">Explorar &rarr;</div>
+                    </a>a>
+
+                    <a href="pregunta4.html" class="q-card amber">
+                                <div>
+                                              <div class="q-number">Pregunta 04</div>
+                                              <div class="q-icon">📊</div>
+                                </div>
+                                <div class="q-title">Riesgo Pa&iacute;s y Mercados</div>
+                                <div class="q-desc">CDS soberano, &iacute;ndice burs&aacute;til TA-125 y percepciones de riesgo por parte de inversores internacionales.</div>
+                                <div class="q-link">Explorar &rarr;</div>
+                    </a>a>
+
+                    <a href="pregunta5.html" class="q-card purple">
+                                <div>
+                                              <div class="q-number">Pregunta 05</div>
+                                              <div class="q-icon">🏛️</div>
+                                </div>
+                                <div class="q-title">Implicaciones de Pol&iacute;tica P&uacute;blica</div>
+                                <div class="q-desc">Recomendaciones basadas en evidencia para pol&iacute;tica monetaria, fiscal y estabilidad regional en econom&iacute;as en conflicto.</div>
+                                <div class="q-link">Explorar &rarr;</div>
+                    </a>a>
+
+          </div>
+      </div>
+    </section>section>
+
+        <!-- ABOUT SECTION -->
+        <section class="section about-section">
+              <div class="section-inner">
+                      <div class="about-grid">
+                                <div class="about-text">
+                                            <div class="section-tag">Sobre el Dataset</div>
+                                            <h2>Datos rigurosos, metodolog&iacute;a transparente</h2>
+                                        <p>
+                                                      Este dataset proporciona una visi&oacute;n integral del impacto econ&oacute;mico de Israel durante los &uacute;ltimos cinco a&ntilde;os,
+                                                      compilado mediante Perplexity AI e integrado con fuentes institucionales de primer nivel.
+                                        </p>
+                                            <p>
+                                                          La contribuci&oacute;n metodol&oacute;gica principal es la integraci&oacute;n de variables de riesgo geopo&iacute;tico cuantificables
+                                                          (intensidad de conflicto, movilizaci&oacute;n de reservistas) con indicadores macroecon&oacute;micos de alta frecuencia.
+                                            </p>
+                                            <div class="doi-card">
+                                                          <div>
+                                                                          <div class="doi-label">DOI</div>
+                                                                          <a href="https://doi.org/10.5281/zenodo.1887" target="_blank">doi.org/10.5281/zenodo.1887</a>a>
+                                                          </div>
+                                            </div>
+                                </div>
+                                <div>
+                                            <div class="section-tag" style="margin-bottom:1.25rem;">Fuentes de Datos</div>
+                                            <div class="sources-list">
+                                                          <div class="source-badge"><span class="icon">🌐</span> TradingEconomics</div>
+                                                          <div class="source-badge"><span class="icon">🏦</span> World Bank</div>
+                                                          <div class="source-badge"><span class="icon">📋</span> FMI / IMF</div>
+                                                          <div class="source-badge"><span class="icon">🇮🇱</span> Bank of Israel</div>
+                                                          <div class="source-badge"><span class="icon">📈</span> OECD</div>
+                                                          <div class="source-badge"><span class="icon">🤖</span> Perplexity AI</div>
+                                            </div>
+                                </div>
+                      </div>
+              </div>
+        </section>section>
+
+        <!-- FOOTER -->
+        <footer>
+              <div class="footer-inner">
+                      <div class="footer-brand">IsraelEconDB 2020&ndash;2024</div>
+                      <div class="footer-text">
+                                Dataset de impacto econ&oacute;mico &middot; Indicadores clave y factores de resiliencia
+                      </div>
+                      <a href="https://github.com/juanmoisesd/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore/blob/main/LICENSE" class="footer-license" target="_blank">
+                                &#x2713; CC0 1.0 Universal &mdash; Dominio P&uacute;blico
+                      </a>a>
+              </div>
+        </footer>
+
+    </body>
+</html>html>
+        </footer>
+                                            </p>
+                                        </p></h2>
+                                </div>
+                        </div></h1></li></li></span>
+        </nav>
+    </body>
+      </style></title>
+    </head>
