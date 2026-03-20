@@ -1,66 +1,161 @@
-# Base de Datos de Impacto Económico de Israel (2020–2024): Indicadores Clave, Factores Principales e Índices Financieros
+# Base de Datos de Impacto Económico de Israel (2020–2024): Indicadores Macroeconómicos, Factores Estructurales e Índices Financieros
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18879626.svg)](https://doi.org/10.5281/zenodo.18879626)
 [![ORCID](https://img.shields.io/badge/ORCID-0000--0002--8401--8018-green)](https://orcid.org/0000-0002-8401-8018)
 [![License: CC0](https://img.shields.io/badge/License-CC0%201.0-lightgrey)](http://creativecommons.org/publicdomain/zero/1.0/)
-[![Pages](https://img.shields.io/badge/Live-Microsite-brightgreen)](https://juanmoisesd.github.io/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore/)
+[![Microsite](https://img.shields.io/badge/Interactive-Microsite-brightgreen)](https://juanmoisesd.github.io/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factores-principales-e-indices-financieros/)
 
-## Overview
+---
 
-Este dataset ofrece una visión estructurada del impacto económico de Israel entre 2020 y 2024, con indicadores macroeconómicos, financieros y factores de riesgo regional. [page:2] Se compiló usando Perplexity AI a partir de TradingEconomics, World Bank, FMI, Bank of Israel, Jefferies, Wikipedia, Times of Israel, OCDE y otras fuentes oficiales y secundarias. [page:2] La base se organiza en 9 tablas temáticas que cubren indicadores macro, índices financieros y shocks geopolíticos relevantes del periodo. [page:2]
+## 📄 Descripción
 
-## Dataset Status
+Este dataset proporciona una recopilación estructurada de indicadores económicos de Israel para el periodo 2020–2024, integrando variables macroeconómicas, financieras, estructurales y factores geopolíticos relevantes.
 
-| Field      | Value                                                           |
-|-----------|-----------------------------------------------------------------|
-| Status    | 🟢 Published                                                    |
-| DOI       | [10.5281/zenodo.18879626](https://doi.org/10.5281/zenodo.18879626) |
-| Platform  | Zenodo                                                          |
-| License   | CC0 1.0                                                         |
-| Published | 2026-03-05                                                      | [page:2]
+El objetivo es facilitar:
+- análisis económicos comparativos,
+- estudios regionales en Oriente Medio,
+- evaluación de impacto de shocks geopolíticos,
+- investigación aplicada en economía y políticas públicas.
 
-## 🌐 Interactive Microsite
+El dataset está diseñado siguiendo principios de datos abiertos y reutilización científica.
 
-Explora gráficos, filtros y descripciones de las tablas en el micrositio interactivo: **[Open Microsite](https://juanmoisesd.github.io/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore/)**. [page:2]
+---
 
-## Data Structure
+## 📊 Estado del Dataset
 
-La base de datos está organizada en 9 tablas temáticas, documentadas en detalle en el depósito de Zenodo asociado al DOI. [page:2] A continuación se presentan los nombres de las tablas y algunos ejemplos de variables incluidas. [page:2]
+| Campo        | Valor |
+|--------------|------|
+| Estado       | 🟢 Publicado |
+| DOI          | https://doi.org/10.5281/zenodo.18879626 |
+| Plataforma   | Zenodo |
+| Licencia     | CC0 1.0 (Dominio público) |
+| Fecha        | 2026-03-05 |
+| Versión      | 1.0.0 |
 
-1. **Tabla 1 – Indicadores Macroeconómicos Anuales**  
-   - Ejemplos de variables: `year`, `gdp_real_growth`, `inflation_cpi`, `unemployment_rate`.  
-2. **Tabla 2 – Sector Externo y Comercio**  
-   - Ejemplos de variables: `exports_goods_services`, `imports_goods_services`, `current_account_balance`.  
-3. **Tabla 3 – Finanzas Públicas**  
-   - Ejemplos de variables: `fiscal_balance_gdp`, `public_debt_gdp`, `government_expenditure`.  
-4. **Tabla 4 – Mercado Laboral y Salarios**  
-   - Ejemplos de variables: `employment_rate`, `labor_force_participation`, `average_wage_index`.  
-5. **Tabla 5 – Precios, Vivienda y Consumo**  
-   - Ejemplos de variables: `housing_price_index`, `rent_price_index`, `private_consumption_growth`.  
-6. **Tabla 6 – Sistema Financiero e Índices de Mercado**  
-   - Ejemplos de variables: `policy_interest_rate`, `stock_index_ta35`, `credit_to_private_sector`.  
-7. **Tabla 7 – Tipo de Cambio y Sector Externo Financiero**  
-   - Ejemplos de variables: `exchange_rate_usd_ils`, `foreign_reserves`, `net_fdi_flows`.  
-8. **Tabla 8 – Riesgo País y Prima de Riesgo**  
-   - Ejemplos de variables: `sovereign_spread`, `credit_rating`, `cds_5y`.  
-9. **Tabla 9 – Shocks y Factores Geopolíticos (2020–2024)**  
-   - Ejemplos de variables: `event_date`, `event_type`, `conflict_intensity_index`, `policy_response_dummy`.  
+---
 
-Cada tabla incluye metadatos sobre la fuente original, unidad de medida, frecuencia temporal y notas metodológicas, accesibles en la documentación de Zenodo y en el micrositio. [page:2]
+## 🌐 Micrositio Interactivo
 
-## Keywords
+Visualización avanzada del dataset (gráficos, filtros y exploración interactiva):
 
-Israel, macroeconomía, PIB, inflación, indicadores financieros, Oriente Medio. [page:2]
+👉 https://juanmoisesd.github.io/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factores-principales-e-indices-financieros/
 
-## Citation
+---
 
-> de la Serna Tuya, J. M. (2026). *Base de Datos de Impacto Económico de Israel (2020–2024): Indicadores Clave, Factores Principales e Índices Financieros*. Zenodo. https://doi.org/10.5281/zenodo.18879626 [page:2]
+## 🧩 Estructura del Dataset
 
-## Author
+El dataset se organiza en **9 tablas temáticas**, cada una con metadatos completos (fuente, unidades, frecuencia y notas metodológicas).
 
-**Juan Moisés de la Serna Tuya** · UNIR  
-[juanmoisesdelaserna.es](https://juanmoisesdelaserna.es) · ORCID: [0000-0002-8401-8018](https://orcid.org/0000-0002-8401-8018) [page:2]
+### 1. Indicadores Macroeconómicos Anuales
+- `year`
+- `gdp_real_growth`
+- `inflation_cpi`
+- `unemployment_rate`
 
-## License
+### 2. Sector Externo y Comercio
+- `exports_goods_services`
+- `imports_goods_services`
+- `current_account_balance`
 
-Este trabajo se distribuye bajo [CC0 1.0 Universal](LICENSE) — Public Domain Dedication. [page:2]
+### 3. Finanzas Públicas
+- `fiscal_balance_gdp`
+- `public_debt_gdp`
+- `government_expenditure`
+
+### 4. Mercado Laboral y Salarios
+- `employment_rate`
+- `labor_force_participation`
+- `average_wage_index`
+
+### 5. Precios, Vivienda y Consumo
+- `housing_price_index`
+- `rent_price_index`
+- `private_consumption_growth`
+
+### 6. Sistema Financiero e Índices de Mercado
+- `policy_interest_rate`
+- `stock_index_ta35`
+- `credit_to_private_sector`
+
+### 7. Tipo de Cambio y Sector Externo Financiero
+- `exchange_rate_usd_ils`
+- `foreign_reserves`
+- `net_fdi_flows`
+
+### 8. Riesgo País
+- `sovereign_spread`
+- `credit_rating`
+- `cds_5y`
+
+### 9. Shocks Geopolíticos (2020–2024)
+- `event_date`
+- `event_type`
+- `conflict_intensity_index`
+- `policy_response_dummy`
+
+---
+
+## 🧪 Metodología y Fuentes
+
+Los datos han sido compilados a partir de fuentes oficiales y bases de datos económicas reconocidas, incluyendo:
+
+- World Bank
+- International Monetary Fund (IMF)
+- OECD
+- Bank of Israel
+- Trading Economics
+
+Se ha realizado un proceso de:
+- curación de datos,
+- estandarización de variables,
+- validación cruzada entre fuentes,
+- estructuración en formato analítico.
+
+---
+
+## 🔑 Palabras clave
+
+Israel · macroeconomía · PIB · inflación · indicadores económicos · mercados financieros · geopolítica · Oriente Medio · open data
+
+---
+
+## 📖 Citación
+
+
+de la Serna Tuya, J. M. (2026). Base de Datos de Impacto Económico de Israel (2020–2024): Indicadores Macroeconómicos, Factores Estructurales e Índices Financieros. Zenodo. https://doi.org/10.5281/zenodo.18879626
+
+
+---
+
+## 👤 Autor
+
+**Juan Moisés de la Serna Tuya**  
+Doctor en Psicología  
+Universidad Internacional de La Rioja (UNIR)
+
+🔗 https://juanmoisesdelaserna.es  
+🔗 ORCID: https://orcid.org/0000-0002-8401-8018  
+
+---
+
+## 📜 Licencia
+
+Este dataset se distribuye bajo licencia **CC0 1.0 Universal (Public Domain Dedication)**, permitiendo su uso, modificación y distribución sin restricciones.
+
+---
+
+## ⚠️ Notas de uso
+
+- Este dataset está destinado a investigación, análisis y docencia.
+- Aunque se han utilizado fuentes oficiales, se recomienda verificar los datos antes de su uso en decisiones críticas.
+- No constituye asesoramiento financiero ni económico.
+
+---
+
+## 📌 Recomendación técnica
+
+Para máxima interoperabilidad, se recomienda utilizar junto con:
+- `CITATION.cff`
+- `codemeta.json`
+- `datapackage.json`
+- `codebook` o diccionario de variables
