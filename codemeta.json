@@ -1,23 +1,42 @@
 {
   "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
-  "@type": "Dataset",
-  "name": "Base de Datos de Impacto Econ\u00f3mico de Israel (2020-2024): Indicadores Clave, Factores Principales e \u00cdndices Financieros",
-  "identifier": "10.5281/zenodo.18879626",
-  "url": "https://doi.org/10.5281/zenodo.18879626",
+  "@type": "SoftwareSourceCode",
+  "name": "Este dataset proporciona una visi&oacute;n completa del impacto econ&oacute;mico de Israel durante los &uacute;ltimos cinco a&ntilde;os (2020&ndash;2024), compilado a partir de Perplexity AI agregando datos de TradingEconomics, World Bank, FMI, Bank ",
+  "description": "Este dataset proporciona una visi&oacute;n completa del impacto econ&oacute;mico de Israel durante los &uacute;ltimos cinco a&ntilde;os (2020&ndash;2024), compilado a partir de Perplexity AI agregando datos de TradingEconomics, World Bank, FMI, Bank ",
+  "url": "https://github.com/juanmoisesd/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore",
+  "codeRepository": "https://github.com/juanmoisesd/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore",
+  "dateCreated": "2026-03-20",
+  "dateModified": "2026-03-20",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "version": "1.0.0",
   "author": [
     {
       "@type": "Person",
-      "givenName": "Juan Mois\u00e9s",
+      "givenName": "Juan Moisés",
       "familyName": "de la Serna Tuya",
-      "@id": "https://orcid.org/0000-0002-8401-8018"
+      "@id": "https://orcid.org/0000-0002-8401-8018",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Universidad Internacional de La Rioja (UNIR)"
+      },
+      "email": "juanmoises.delaserna@unir.net"
     }
   ],
-  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
   "keywords": [
-    "Israel",
-    "macroeconom\u00eda",
-    "PIB",
-    "inflaci\u00f3n",
-    "Oriente Medio"
-  ]
+    "open-data",
+    "dataset",
+    "research"
+  ],
+  "programmingLanguage": "HTML",
+  "maintainer": [
+    {
+      "@type": "Person",
+      "givenName": "Juan Moisés",
+      "familyName": "de la Serna Tuya"
+    }
+  ],
+  "funder": {
+    "@type": "Organization",
+    "name": "Universidad Internacional de La Rioja (UNIR)"
+  }
 }
