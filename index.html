@@ -1,182 +1,148 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Israel Econ DB 2020-2024 | Inicio</title>
+  <meta name="description" content="Este dataset proporciona una visi&oacute;n completa del impacto econ&oacute;mico de Israel durante los &uacute;ltimos cinco a&ntilde;os (2020&ndash;2024), compilado a partir de Perplexity AI agregando datos de TradingEconomics, World Bank, FMI, Bank ">
+  <meta name="author" content="Juan Moisés de la Serna Tuya">
+  <meta name="keywords" content=", open-data, dataset, fair-data, zenodo, orcid, juan moises de la serna, neuroeconomics, latin america">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="dataset">
+  <meta property="og:title" content="base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore">
+  <meta property="og:description" content="Este dataset proporciona una visi&oacute;n completa del impacto econ&oacute;mico de Israel durante los &uacute;ltimos cinco a&ntilde;os (2020&ndash;2024), compilado a partir de Perplexity AI agregando datos de TradingEconomics, World Bank, FMI, Bank ">
+  <meta property="og:url" content="https://github.com/juanmoisesd/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore">
+  <meta property="og:site_name" content="Juan Moisés de la Serna Tuya — Open Research">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore">
+  <meta name="twitter:description" content="Este dataset proporciona una visi&oacute;n completa del impacto econ&oacute;mico de Israel durante los &uacute;ltimos cinco a&ntilde;os (2020&ndash;2024), compilado a partir de Perplexity AI agregando datos de TradingEconomics, World Bank, FMI, Bank ">
+  <link rel="canonical" href="https://github.com/juanmoisesd/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore">
+  <title>base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore | Juan Moisés de la Serna Tuya</title>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore",
+    "description": "Este dataset proporciona una visi&oacute;n completa del impacto econ&oacute;mico de Israel durante los &uacute;ltimos cinco a&ntilde;os (2020&ndash;2024), compilado a partir de Perplexity AI agregando datos de TradingEconomics, World Bank, FMI, Bank ",
+    "url": "https://github.com/juanmoisesd/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore",
+    "sameAs": "https://juanmoisesd.github.io/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore/",
+    "identifier": "https://github.com/juanmoisesd/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore",
+    "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "isAccessibleForFree": true,
+    "keywords": [],
+    "creator": {
+      "@type": "Person",
+      "name": "Juan Moisés de la Serna Tuya",
+      "identifier": "https://orcid.org/0000-0002-8401-8018",
+      "sameAs": [
+        "https://orcid.org/0000-0002-8401-8018",
+        "https://www.linkedin.com/in/juanmoisesdelaserna/",
+        "https://www.scopus.com/authid/detail.uri?authorId=26632846700",
+        "https://www.researchgate.net/profile/Juan_De_La_Serna_Tuya",
+        "https://github.com/juanmoisesd"
+      ],
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Universidad Internacional de La Rioja (UNIR)"
+      }
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "GitHub",
+      "url": "https://github.com"
+    },
+    "datePublished": "2025",
+    "dateModified": "2025",
+    "inLanguage": ["es", "en"],
+    "distribution": {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://github.com/juanmoisesd/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore"
+    }
+  }
+  </script>
   <style>
-    :root{--bg-primary:#0f172a;--bg-secondary:#1e293b;--bg-card:#334155;--text-primary:#f8fafc;--text-secondary:#94a3b8;--accent:#3b82f6;--accent-pink:#ec4899;--accent-teal:#14b8a6;--accent-amber:#f59e0b;--border:#334155;--success:#10b981}
-    *{margin:0;padding:0;box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg-primary);color:var(--text-primary);line-height:1.6}
-    nav{background:rgba(15,23,42,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:1000;padding:1rem 0}
-    .nav-container{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;justify-content:space-between;align-items:center}
-    .nav-brand{font-size:1.1rem;font-weight:800;color:var(--accent);text-decoration:none}
-    .nav-brand span{color:var(--accent-pink)}
-    .nav-links{display:flex;gap:1.5rem;list-style:none}
-    .nav-links a{color:var(--text-secondary);text-decoration:none;font-size:.875rem;font-weight:500;padding:.4rem .6rem;border-radius:6px;transition:color .2s}
-    .nav-links a:hover{color:var(--text-primary);background:rgba(255,255,255,.05)}
-    .nav-links a.active{color:var(--accent)}
-    .hero{min-height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:4rem 2rem;position:relative;overflow:hidden}
-    .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 30%,rgba(59,130,246,.12) 0%,transparent 70%),radial-gradient(ellipse 50% 40% at 80% 80%,rgba(236,72,153,.08) 0%,transparent 60%);pointer-events:none}
-    .hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(59,130,246,.12);border:1px solid rgba(59,130,246,.3);color:var(--accent);padding:.4rem 1rem;border-radius:999px;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-bottom:1.5rem}
-    .hero-badge .dot{width:6px;height:6px;background:var(--accent);border-radius:50%;animation:pulse 2s infinite}
-    @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
-    .hero h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:900;letter-spacing:-.04em;line-height:1.1;margin-bottom:.5rem;background:linear-gradient(135deg,#f8fafc 30%,#94a3b8 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-    .hero h1 .hl{background:linear-gradient(135deg,#3b82f6,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-    .hero-sub{font-size:1.1rem;color:var(--text-secondary);max-width:680px;margin:1.25rem auto 2.5rem;line-height:1.7}
-    .hero-actions{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
-    .btn-p{background:var(--accent);color:#fff;padding:.8rem 2rem;border-radius:10px;text-decoration:none;font-weight:600;font-size:.95rem;transition:all .2s;box-shadow:0 4px 20px rgba(59,130,246,.35)}
-    .btn-p:hover{background:#2563eb;transform:translateY(-1px)}
-    .btn-o{background:transparent;color:var(--text-primary);padding:.8rem 2rem;border-radius:10px;text-decoration:none;font-weight:600;font-size:.95rem;border:1px solid var(--border);transition:all .2s}
-    .btn-o:hover{background:rgba(255,255,255,.05);transform:translateY(-1px)}
-    .stats-strip{background:var(--bg-secondary);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:2.5rem 2rem}
-    .stats-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:2rem;text-align:center}
-    .sv{font-size:2rem;font-weight:800;letter-spacing:-.03em;margin-bottom:.25rem}
-    .sv.b{color:var(--accent)}.sv.p{color:var(--accent-pink)}.sv.t{color:var(--accent-teal)}.sv.a{color:var(--accent-amber)}
-    .sl{font-size:.8rem;color:var(--text-secondary);font-weight:500;letter-spacing:.03em;text-transform:uppercase}
-    .sec{padding:5rem 2rem}
-    .sec-in{max-width:1200px;margin:0 auto}
-    .sec-tag{display:inline-block;background:rgba(59,130,246,.1);color:var(--accent);border:1px solid rgba(59,130,246,.25);border-radius:6px;padding:.2rem .75rem;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:1rem}
-    .sec-title{font-size:clamp(1.5rem,3vw,2.25rem);font-weight:800;letter-spacing:-.03em;margin-bottom:.75rem;line-height:1.2}
-    .sec-desc{color:var(--text-secondary);font-size:1rem;max-width:560px;margin-bottom:3rem;line-height:1.7}
-    .q-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem}
-    .qc{background:var(--bg-secondary);border:1px solid var(--border);border-radius:16px;padding:1.75rem;text-decoration:none;color:inherit;transition:all .25s;display:flex;flex-direction:column;gap:1rem;position:relative;overflow:hidden}
-    .qc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:16px 16px 0 0}
-    .qc.b::before{background:linear-gradient(90deg,var(--accent),#818cf8)}
-    .qc.pk::before{background:linear-gradient(90deg,var(--accent-pink),#f97316)}
-    .qc.tl::before{background:linear-gradient(90deg,var(--accent-teal),#22c55e)}
-    .qc.am::before{background:linear-gradient(90deg,var(--accent-amber),#ef4444)}
-    .qc.pu::before{background:linear-gradient(90deg,#a855f7,#3b82f6)}
-    .qc:hover{border-color:#475569;transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.4)}
-    .qn{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-secondary)}
-    .qi{font-size:2rem;margin-bottom:.25rem}
-    .qt{font-size:1rem;font-weight:700;color:var(--text-primary);line-height:1.4;flex:1}
-    .qd{font-size:.85rem;color:var(--text-secondary);line-height:1.6}
-    .ql{display:inline-flex;align-items:center;gap:.35rem;font-size:.82rem;font-weight:600;margin-top:.5rem}
-    .qc.b .ql{color:var(--accent)}.qc.pk .ql{color:var(--accent-pink)}.qc.tl .ql{color:var(--accent-teal)}.qc.am .ql{color:var(--accent-amber)}.qc.pu .ql{color:#a855f7}
-    .about-sec{background:var(--bg-secondary);border-top:1px solid var(--border)}
-    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
-    .at h2{font-size:1.75rem;font-weight:800;margin-bottom:1rem;letter-spacing:-.03em}
-    .at p{color:var(--text-secondary);line-height:1.8;margin-bottom:1rem;font-size:.95rem}
-    .src-list{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
-    .src-badge{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:.75rem 1rem;font-size:.8rem;font-weight:600;color:var(--text-secondary);display:flex;align-items:center;gap:.5rem}
-    .doi-card{background:rgba(59,130,246,.07);border:1px solid rgba(59,130,246,.25);border-radius:12px;padding:1.25rem 1.5rem;margin-top:2rem}
-    .doi-lbl{font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:.2rem}
-    .doi-card a{color:var(--text-primary);text-decoration:none;font-size:.9rem;font-weight:500}
-    .doi-card a:hover{color:var(--accent)}
-    footer{background:#080f1e;border-top:1px solid var(--border);padding:2.5rem 2rem;text-align:center}
-    .fi{max-width:1200px;margin:0 auto}
-    .fb{font-size:1rem;font-weight:700;color:var(--accent);margin-bottom:.5rem}
-    .ft{color:var(--text-secondary);font-size:.82rem;margin-bottom:1rem}
-    .fl{display:inline-flex;align-items:center;gap:.4rem;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.25);color:var(--success);padding:.3rem .8rem;border-radius:6px;font-size:.75rem;font-weight:600;text-decoration:none}
-    @media(max-width:768px){.about-grid{grid-template-columns:1fr;gap:2rem}}
-    @media(max-width:640px){.nav-links{display:none}.hero{min-height:75vh}.q-grid{grid-template-columns:1fr}.src-list{grid-template-columns:1fr}}
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 860px; margin: 0 auto; padding: 2rem; color: #24292e; }
+    header { border-bottom: 3px solid #0366d6; padding-bottom: 1.5rem; margin-bottom: 2rem; }
+    h1 { color: #0366d6; font-size: 1.8rem; }
+    .badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0; }
+    .badges img { height: 20px; }
+    .author-card { background: #f6f8fa; border: 1px solid #e1e4e8; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .author-card h2 { color: #0366d6; margin-top: 0; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+    th, td { border: 1px solid #e1e4e8; padding: 0.5rem 1rem; text-align: left; }
+    th { background: #f6f8fa; }
+    .citation-block { background: #fff8c5; border: 1px solid #f0e68c; border-radius: 6px; padding: 1rem 1.5rem; margin: 1rem 0; }
+    pre { background: #f6f8fa; padding: 1rem; border-radius: 6px; overflow-x: auto; font-size: 0.85rem; }
+    a { color: #0366d6; }
+    footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #e1e4e8; font-size: 0.85rem; color: #586069; }
   </style>
 </head>
 <body>
-<nav>
-  <div class="nav-container">
-    <a href="index.html" class="nav-brand">Israel<span>Econ</span>DB</a>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Inicio</a></li>
-      <li><a href="pregunta1.html">PIB &amp; Inflaci&oacute;n</a></li>
-      <li><a href="pregunta2.html">Shocks Geopol&iacute;ticos</a></li>
-      <li><a href="pregunta3.html">Finanzas P&uacute;blicas</a></li>
-      <li><a href="pregunta4.html">Riesgo Pa&iacute;s</a></li>
-      <li><a href="pregunta5.html">Implicaciones</a></li>
-    </ul>
+
+<header>
+  <h1>📂 base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore</h1>
+  <p>Este dataset proporciona una visi&oacute;n completa del impacto econ&oacute;mico de Israel durante los &uacute;ltimos cinco a&ntilde;os (2020&ndash;2024), compilado a partir de Perplexity AI agregando datos de TradingEconomics, World Bank, FMI, Bank </p>
+  <div class="badges">
+    <a href="https://orcid.org/0000-0002-8401-8018"><img src="https://img.shields.io/badge/ORCID-0000--0002--8401--8018-green?logo=orcid" alt="ORCID"></a>
+    <a href="https://www.linkedin.com/in/juanmoisesdelaserna/"><img src="https://img.shields.io/badge/LinkedIn-juanmoisesdelaserna-blue?logo=linkedin" alt="LinkedIn"></a>
+    <a href="https://github.com/juanmoisesd/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore"><img src="https://img.shields.io/badge/GitHub-Repository-black?logo=github" alt="GitHub"></a>
+    <img src="https://img.shields.io/badge/License-CC0_1.0-lightgrey" alt="CC0">
+    <img src="https://img.shields.io/badge/Data-FAIR_Compliant-brightgreen" alt="FAIR">
   </div>
-</nav>
-<section class="hero">
-  <div class="hero-badge"><span class="dot"></span>Dataset Abierto &middot; CC0 License</div>
-  <h1>Base de Datos de<br><span class="hl">Impacto Econ&oacute;mico de Israel</span></h1>
-  <p class="hero-sub">An&aacute;lisis sistem&aacute;tico de indicadores macroecon&oacute;micos, shocks geopol&iacute;ticos y finanzas p&uacute;blicas de Israel durante 2020&ndash;2024. Fuentes: TradingEconomics, World Bank, FMI y Bank of Israel.</p>
-  <div class="hero-actions">
-    <a href="pregunta1.html" class="btn-p">Explorar Datos &rarr;</a>
-    <a href="https://doi.org/10.5281/zenodo.1887" class="btn-o" target="_blank">Ver DOI</a>
+</header>
+
+<main>
+  <section>
+    <h2>📋 About This Dataset</h2>
+    <p>Este dataset proporciona una visi&oacute;n completa del impacto econ&oacute;mico de Israel durante los &uacute;ltimos cinco a&ntilde;os (2020&ndash;2024), compilado a partir de Perplexity AI agregando datos de TradingEconomics, World Bank, FMI, Bank </p>
+    <p><strong>Topics:</strong> </p>
+    <p><a href="https://github.com/juanmoisesd/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore" target="_blank">→ View on GitHub</a> | <a href="https://github.com/juanmoisesd/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore/blob/main/README.md" target="_blank">→ README</a> | <a href="https://github.com/juanmoisesd/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore/blob/main/GLOSSARY.md" target="_blank">→ Glossary</a></p>
+  </section>
+
+  <div class="author-card">
+    <h2>👤 About the Author</h2>
+    <p><strong>Juan Moisés de la Serna Tuya</strong><br>
+    <em>Neuroeconomista forense de élite | IA antifraude + sesgos en decisiones económicas | Gobiernos · Bancos centrales · Big Four · Fortune 500</em></p>
+    <table>
+      <tr><th>Identifier</th><th>Link</th></tr>
+      <tr><td>ORCID</td><td><a href="https://orcid.org/0000-0002-8401-8018">0000-0002-8401-8018</a></td></tr>
+      <tr><td>LinkedIn</td><td><a href="https://www.linkedin.com/in/juanmoisesdelaserna/">juanmoisesdelaserna</a></td></tr>
+      <tr><td>Scopus</td><td><a href="https://www.scopus.com/authid/detail.uri?authorId=26632846700">26632846700</a></td></tr>
+      <tr><td>ResearcherID</td><td><a href="https://www.webofscience.com/wos/author/record/M-8296-2019">M-8296-2019</a></td></tr>
+      <tr><td>ResearchGate</td><td><a href="https://www.researchgate.net/profile/Juan_De_La_Serna_Tuya">Profile</a></td></tr>
+      <tr><td>Institution</td><td><a href="https://www.unir.net">Universidad Internacional de La Rioja (UNIR)</a></td></tr>
+    </table>
+    <p>290+ scientific works · 500+ DOIs · 90+ open datasets · Top 1% Academia.edu</p>
   </div>
-</section>
-<div class="stats-strip">
-  <div class="stats-grid">
-    <div><div class="sv b">5</div><div class="sl">A&ntilde;os cubiertos</div></div>
-    <div><div class="sv p">5</div><div class="sl">Preguntas de investigaci&oacute;n</div></div>
-    <div><div class="sv t">4+</div><div class="sl">Fuentes institucionales</div></div>
-    <div><div class="sv a">CC0</div><div class="sl">Licencia abierta</div></div>
-  </div>
-</div>
-<section class="sec">
-  <div class="sec-in">
-    <div class="sec-tag">Preguntas de Investigaci&oacute;n</div>
-    <h2 class="sec-title">Cinco dimensiones de an&aacute;lisis</h2>
-    <p class="sec-desc">El dataset organiza su evidencia en torno a cinco preguntas clave sobre el impacto econ&oacute;mico de Israel 2020&ndash;2024.</p>
-    <div class="q-grid">
-      <a href="pregunta1.html" class="qc b">
-        <div><div class="qn">Pregunta 01</div><div class="qi">&#x1F4C8;</div></div>
-        <div class="qt">PIB, Crecimiento e Inflaci&oacute;n</div>
-        <div class="qd">Evoluci&oacute;n del PIB, tasas de crecimiento real e inflaci&oacute;n acumulada 2020&ndash;2024.</div>
-        <div class="ql">Explorar &rarr;</div>
-      </a>
-      <a href="pregunta2.html" class="qc pk">
-        <div><div class="qn">Pregunta 02</div><div class="qi">&#x1F6E1;&#xFE0F;</div></div>
-        <div class="qt">Shocks Geopol&iacute;ticos</div>
-        <div class="qd">An&aacute;lisis de choques ex&oacute;genos de seguridad y su transmisi&oacute;n a variables macroecon&oacute;micas.</div>
-        <div class="ql">Explorar &rarr;</div>
-      </a>
-      <a href="pregunta3.html" class="qc tl">
-        <div><div class="qn">Pregunta 03</div><div class="qi">&#x1F4B0;</div></div>
-        <div class="qt">Finanzas P&uacute;blicas</div>
-        <div class="qd">Deuda, d&eacute;ficit fiscal y sostenibilidad de las finanzas del Estado ante la guerra.</div>
-        <div class="ql">Explorar &rarr;</div>
-      </a>
-      <a href="pregunta4.html" class="qc am">
-        <div><div class="qn">Pregunta 04</div><div class="qi">&#x1F4CA;</div></div>
-        <div class="qt">Riesgo Pa&iacute;s y Mercados</div>
-        <div class="qd">CDS soberano, &iacute;ndice TA-125 y percepciones de riesgo de inversores internacionales.</div>
-        <div class="ql">Explorar &rarr;</div>
-      </a>
-      <a href="pregunta5.html" class="qc pu">
-        <div><div class="qn">Pregunta 05</div><div class="qi">&#x1F3DB;&#xFE0F;</div></div>
-        <div class="qt">Implicaciones de Pol&iacute;tica P&uacute;blica</div>
-        <div class="qd">Recomendaciones para pol&iacute;tica monetaria, fiscal y estabilidad regional en econom&iacute;as en conflicto.</div>
-        <div class="ql">Explorar &rarr;</div>
-      </a>
+
+  <section>
+    <h2>📚 Cite This Dataset</h2>
+    <div class="citation-block">
+      <strong>APA 7:</strong><br>
+      De la Serna Tuya, J. M. (2025). <em>base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore</em> [Dataset]. GitHub. https://github.com/juanmoisesd/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore
     </div>
-  </div>
-</section>
-<section class="sec about-sec">
-  <div class="sec-in">
-    <div class="about-grid">
-      <div class="at">
-        <div class="sec-tag">Sobre el Dataset</div>
-        <h2>Datos rigurosos, metodolog&iacute;a transparente</h2>
-        <p>Visi&oacute;n integral del impacto econ&oacute;mico de Israel durante cinco a&ntilde;os, compilado con Perplexity AI e integrado con fuentes institucionales de primer nivel.</p>
-        <p>Contribuci&oacute;n metodol&oacute;gica: integraci&oacute;n de variables de riesgo geopol&iacute;tico cuantificables con indicadores macroecon&oacute;micos de alta frecuencia.</p>
-        <div class="doi-card">
-          <div class="doi-lbl">DOI</div>
-          <a href="https://doi.org/10.5281/zenodo.1887" target="_blank">doi.org/10.5281/zenodo.1887</a>
-        </div>
-      </div>
-      <div>
-        <div class="sec-tag" style="margin-bottom:1.25rem">Fuentes de Datos</div>
-        <div class="src-list">
-          <div class="src-badge">&#x1F310; TradingEconomics</div>
-          <div class="src-badge">&#x1F3E6; World Bank</div>
-          <div class="src-badge">&#x1F4CB; FMI / IMF</div>
-          <div class="src-badge">&#x1F1EE;&#x1F1F1; Bank of Israel</div>
-          <div class="src-badge">&#x1F4C8; OECD</div>
-          <div class="src-badge">&#x1F916; Perplexity AI</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    <pre>@dataset{delaserna2025_base_de_datos_de_impacto_,
+  author    = {De la Serna Tuya, Juan Moisés},
+  title     = {base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore},
+  year      = {2025},
+  publisher = {GitHub},
+  url       = {https://github.com/juanmoisesd/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore},
+  note      = {ORCID: 0000-0002-8401-8018}
+}</pre>
+  </section>
+
+  <section>
+    <h2>🔗 All Research Repositories</h2>
+    <p>Explore the full collection of 71+ open research datasets:<br>
+    <a href="https://github.com/juanmoisesd" target="_blank">→ github.com/juanmoisesd</a></p>
+  </section>
+</main>
+
 <footer>
-  <div class="fi">
-    <div class="fb">IsraelEconDB 2020&ndash;2024</div>
-    <div class="ft">Dataset de impacto econ&oacute;mico &middot; Indicadores clave y factores de resiliencia</div>
-    <a href="https://github.com/juanmoisesd/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore/blob/main/LICENSE" class="fl" target="_blank">CC0 1.0 Universal &mdash; Dominio P&uacute;blico</a>
-  </div>
+  <p>© 2025 Juan Moisés de la Serna Tuya · <a href="https://orcid.org/0000-0002-8401-8018">ORCID: 0000-0002-8401-8018</a> · License: <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a></p>
+  <p><a href="https://github.com/juanmoisesd/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore/blob/main/ABOUT_THE_AUTHOR.md">About the Author</a> · <a href="https://github.com/juanmoisesd/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore/blob/main/GLOSSARY.md">Glossary</a> · <a href="https://github.com/juanmoisesd/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore/blob/main/CITATION_GUIDE.md">Citation Guide</a></p>
 </footer>
+
 </body>
 </html>
