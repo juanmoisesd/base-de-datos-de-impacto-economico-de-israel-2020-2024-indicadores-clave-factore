@@ -1,41 +1,21 @@
 cff-version: 1.2.0
-message: "If you use this dataset, please cite it as indicated below."
+message: "If you use this software/dataset, please cite it as below."
 type: dataset
-title: "Base de Datos de Impacto Económico de Israel (2020–2024): Indicadores Macroeconómicos, Factores Estructurales e Índices Financieros"
-version: "1.0.0"
-abstract: >
-  This dataset provides structured economic information on Israel for the period 2020–2024,
-  including key macroeconomic indicators, structural determinants, and financial market indices.
-  It is intended for use in economic research, regional analysis, geopolitical studies, and
-  evidence-based policy discussion.
+title: "Este dataset proporciona una visi&oacute;n completa del impacto econ&oacute;mico de Israel durante los &uacute;ltimos cinco a&ntilde;os (2020&ndash;2024), compilado a partir de Perplexity AI agregando datos de TradingEconomics, World Bank, FMI, Bank "
 authors:
   - family-names: "de la Serna Tuya"
     given-names: "Juan Moisés"
     orcid: "https://orcid.org/0000-0002-8401-8018"
     affiliation: "Universidad Internacional de La Rioja (UNIR)"
-doi: "10.5281/zenodo.18879626"
-url: "https://doi.org/10.5281/zenodo.18879626"
-repository-code: "https://github.com/juanmoisesd/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factores-principales-e-indices-financieros"
-license: "CC0-1.0"
-date-released: "2026-03-05"
-lang: "es"
+    email: "juanmoises.delaserna@unir.net"
+repository-code: "https://github.com/juanmoisesd/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore"
+url: "https://juanmoisesd.github.io/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore/"
+abstract: "Este dataset proporciona una visi&oacute;n completa del impacto econ&oacute;mico de Israel durante los &uacute;ltimos cinco a&ntilde;os (2020&ndash;2024), compilado a partir de Perplexity AI agregando datos de TradingEconomics, World Bank, FMI, Bank "
 keywords:
-  - "Israel"
-  - "economía"
-  - "macroeconomía"
-  - "PIB"
-  - "inflación"
-  - "índices financieros"
-  - "impacto económico"
-  - "Oriente Medio"
-  - "geopolítica"
-  - "datos abiertos"
-preferred-citation:
-  type: dataset
-  authors:
-    - family-names: "de la Serna Tuya"
-      given-names: "Juan Moisés"
-  title: "Base de Datos de Impacto Económico de Israel (2020–2024): Indicadores Macroeconómicos, Factores Estructurales e Índices Financieros"
-  doi: "10.5281/zenodo.18879626"
-  url: "https://doi.org/10.5281/zenodo.18879626"
-  date-released: "2026-03-05"
+  - open-data
+  - dataset
+  - research
+  - science
+license: CC0-1.0
+version: "1.0.0"
+date-released: "2026-03-20"
