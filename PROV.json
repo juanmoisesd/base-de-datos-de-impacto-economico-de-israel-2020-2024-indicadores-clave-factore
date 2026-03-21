@@ -1,0 +1,32 @@
+{
+  "wasGeneratedBy": {
+    "activity": "DataCompilation",
+    "agent": {
+      "type": "Person",
+      "name": "Juan Moisés de la Serna Tuya",
+      "orcid": "https://orcid.org/0000-0002-8401-8018",
+      "affiliation": "Universidad Internacional de La Rioja (UNIR)"
+    },
+    "startedAtTime": "2026-03-01T00:00:00Z",
+    "endedAtTime": "2026-03-20T00:00:00Z"
+  },
+  "entity": {
+    "type": "Dataset",
+    "name": "Este dataset proporciona una visi&oacute;n completa del impacto econ&oacute;mico de Israel durante los &uacute;ltimos cinco a&ntilde;os (2020&ndash;2024), compilado a partir de Perplexity AI agregando datos de TradingEconomics, World Bank, FMI, Bank ",
+    "url": "https://github.com/juanmoisesd/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore",
+    "license": "CC0-1.0"
+  },
+  "wasDerivedFrom": {
+    "description": "Compiled from publicly available secondary sources",
+    "sources": [
+      "Public databases",
+      "Peer-reviewed literature",
+      "International organizations"
+    ]
+  },
+  "wasAttributedTo": {
+    "type": "Person",
+    "name": "Juan Moisés de la Serna Tuya",
+    "orcid": "https://orcid.org/0000-0002-8401-8018"
+  }
+}
