@@ -1,13 +1,2 @@
-from setuptools import setup, find_packages
-setup(
-    name="base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore",
-    version="1.0.0",
-    description="Este dataset proporciona una visi&oacute;n completa del impacto econ&oacute;mico de Israel durante l",
-    author="de la Serna, Juan Moisés",
-    url="https://github.com/juanmoisesd/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore",
-    packages=find_packages(),
-    install_requires=["pandas>=1.3.0","requests>=2.26.0"],
-    python_requires=">=3.7",
-    classifiers=["Programming Language :: Python :: 3","License :: OSI Approved :: MIT License","Topic :: Scientific/Engineering"],
-    keywords="cc0, citation, dataset, development-economics, economics, fair-data, gdp, israel, juan-moises-de-la-serna, latin-america, macroeconomics, middle-east, open-data, open-science, orcid, research, zenodo, zenodo, open-data",
-)
+from setuptools import setup,find_packages
+setup(name="base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore",version="1.0.0",description="Este dataset proporciona una visi&oacute;n completa del impacto econ&oacute;mico de Israel durante l",author="de la Serna, Juan Moisés",url="https://github.com/juanmoisesd/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore",packages=find_packages(),install_requires=["pandas>=1.3.0","requests>=2.26.0"],python_requires=">=3.7",classifiers=["Programming Language :: Python :: 3","License :: OSI Approved :: MIT License","Topic :: Scientific/Engineering"],keywords="cc0, citation, dataset, development-economics, economics, fair-data, gdp, israel, juan-moises-de-la-serna, latin-america, macroeconomics, middle-east, open-data, open-science, orcid, research, zenodo, zenodo, open-data, dataset")
