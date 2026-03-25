@@ -1,0 +1,23 @@
+{
+  "title": "Este dataset proporciona una visi&oacute;n completa del impacto econ&oacute;mico",
+  "id": "juanmoisesd/base-de-datos-de-impacto-economico-de-israel-2020-",
+  "licenses": [
+    {
+      "name": "CC BY 4.0"
+    }
+  ],
+  "keywords": [
+    "cc0",
+    "citation",
+    "dataset",
+    "development-economics",
+    "economics",
+    "fair-data",
+    "gdp",
+    "israel",
+    "juan-moises-de-la-serna",
+    "latin-america"
+  ],
+  "description": "Este dataset proporciona una visi&oacute;n completa del impacto econ&oacute;mico de Israel durante los &uacute;ltimos cinco a&ntilde;os (2020&ndash;2024), compilado a partir de Perplexity AI agregando datos de TradingEconomics, World Bank, FMI, Bank \n\nDOI: https://github.com/juanmoisesd/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore\nGitHub: https://github.com/juanmoisesd/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore\nAuthor: de la Serna, Juan Moisés",
+  "isPrivate": false
+}
