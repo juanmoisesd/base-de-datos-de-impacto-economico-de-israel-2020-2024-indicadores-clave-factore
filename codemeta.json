@@ -3,24 +3,18 @@
   "@type": "SoftwareSourceCode",
   "name": "Este dataset proporciona una visi&oacute;n completa del impacto econ&oacute;mico de Israel durante l",
   "version": "1.0.0",
-  "identifier": "https://github.com/juanmoisesd/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore",
-  "datePublished": "2025",
+  "identifier": "https://juanmoisesd.github.io/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore/",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "codeRepository": "https://github.com/juanmoisesd/base-de-datos-de-impacto-economico-de-israel-2020-2024-indicadores-clave-factore",
   "author": [
     {
       "@type": "Person",
       "givenName": "Juan Moisés",
-      "familyName": "de la Serna",
-      "affiliation": {
-        "@type": "Organization",
-        "name": "Universidad Internacional de La Rioja (UNIR)"
-      }
+      "familyName": "de la Serna"
     }
   ],
   "programmingLanguage": [
     "Python",
     "Jupyter Notebook"
-  ],
-  "keywords": "cc0, citation, dataset, development-economics, economics, fair-data, gdp, israel, juan-moises-de-la-serna, latin-america, macroeconomics, middle-east, open-data, open-science, orcid, research, zenodo"
+  ]
 }
